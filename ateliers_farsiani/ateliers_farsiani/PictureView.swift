@@ -12,10 +12,13 @@ struct PictureView: View {
     @State private var images: [String] = ["BlkDressRunway", "BlkDressLegs", "BlkDressCar"]
     
     var body: some View {
-        ScrollView (.vertical) {
-            VStack {
+        ScrollView (.horizontal, showsIndicators: false) {
+            HStack (spacing: 10) {
                 ForEach(images, id: \.self) { image in
                     Image(image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 300, alignment: .center)
                 }
             }
         }
