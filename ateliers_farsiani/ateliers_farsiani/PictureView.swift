@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct PictureView: View {
+    
+    @State private var images: [String] = ["BlkDressRunway", "BlkDressLegs", "BlkDressCar"]
+    
     var body: some View {
-        Text("Picture View")
+        ScrollView (.vertical) {
+            VStack {
+                ForEach(images, id: \.self) { image in
+                    Image(image)
+                }
+            }
+        }
     }
 }
 

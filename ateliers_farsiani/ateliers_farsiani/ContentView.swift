@@ -12,16 +12,16 @@ struct ContentView: View {
         TabView {
             MainView()
                 .tabItem {
-                    Label("Menu", systemImage: "list.dash")
+                    Label("Main", systemImage: "house")
                 }
 
             PictureView()
                 .tabItem {
-                    Label("Pictures", systemImage: "square.and.pencil")
+                    Label("Photos", systemImage: "photo")
                 }
             VideoView()
                 .tabItem {
-                    Label("Videos", systemImage: "square.and.pencil")
+                    Label("Videos", systemImage: "video")
                 }
         }
     }
