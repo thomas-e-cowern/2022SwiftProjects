@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct VideoCardView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "balarinas", withExtension: "mov")!))
+                .frame(height: 400)
+        }
     }
 }
 
