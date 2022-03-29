@@ -9,11 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack (alignment: .center) {
-            Image("Logo")
+        ZStack {
+            Circle()
+                .fill(
+                    RadialGradient(gradient: Gradient(colors: [.blue, Color("Gold")]), center: .center, startRadius: 50, endRadius: 100)
+                )
+                .frame(width: 200, height: 200)
+            VStack (alignment: .center) {
+                Image("Logo")
+            }
         }
-        edgesIgnoringSafeArea(.all)
-            .background()
     }
 }
 
