@@ -12,9 +12,11 @@ struct VideoView: View {
     var videos = ["balarinas", "runway"]
     
     var body: some View {
-        VStack (alignment: .center, spacing: 20) {
-            ForEach(videos, id: \.self) { video in
-                VideoCardView(videoTitle: video)
+        ScrollView (.vertical) {
+            VStack (alignment: .center, spacing: 20) {
+                ForEach(videos, id: \.self) { video in
+                    VideoCardView(videoTitle: video)
+                }
             }
         }
     }

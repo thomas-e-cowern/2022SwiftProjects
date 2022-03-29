@@ -18,6 +18,7 @@
 		4172CF8A27F38C8D00B9E8B1 /* VideoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF8927F38C8D00B9E8B1 /* VideoCardView.swift */; };
 		4172CF8C27F38D1F00B9E8B1 /* balarinas.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4172CF8B27F38D1F00B9E8B1 /* balarinas.mov */; };
 		4172CF8E27F38FAC00B9E8B1 /* runway.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4172CF8D27F38FAC00B9E8B1 /* runway.mov */; };
+		4172CF9027F3931C00B9E8B1 /* runwayback.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4172CF8F27F3931C00B9E8B1 /* runwayback.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4172CF8927F38C8D00B9E8B1 /* VideoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCardView.swift; sourceTree = "<group>"; };
 		4172CF8B27F38D1F00B9E8B1 /* balarinas.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = balarinas.mov; sourceTree = "<group>"; };
 		4172CF8D27F38FAC00B9E8B1 /* runway.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = runway.mov; sourceTree = "<group>"; };
+		4172CF8F27F3931C00B9E8B1 /* runwayback.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = runwayback.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				4172CF7B27F3421F00B9E8B1 /* Launch_Screen.storyboard */,
 				4172CF8B27F38D1F00B9E8B1 /* balarinas.mov */,
 				4172CF8D27F38FAC00B9E8B1 /* runway.mov */,
+				4172CF8F27F3931C00B9E8B1 /* runwayback.mov */,
 			);
 			path = ateliers_farsiani;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4172CF7527F33F6D00B9E8B1 /* Preview Assets.xcassets in Resources */,
+				4172CF9027F3931C00B9E8B1 /* runwayback.mov in Resources */,
 				4172CF7C27F3421F00B9E8B1 /* Launch_Screen.storyboard in Resources */,
 				4172CF8E27F38FAC00B9E8B1 /* runway.mov in Resources */,
 				4172CF8C27F38D1F00B9E8B1 /* balarinas.mov in Resources */,
