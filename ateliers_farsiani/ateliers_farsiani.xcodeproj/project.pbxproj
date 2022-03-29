@@ -15,6 +15,7 @@
 		4172CF7E27F355A400B9E8B1 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF7D27F355A400B9E8B1 /* PictureView.swift */; };
 		4172CF8027F355B300B9E8B1 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF7F27F355B300B9E8B1 /* VideoView.swift */; };
 		4172CF8227F3575000B9E8B1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF8127F3575000B9E8B1 /* MainView.swift */; };
+		4172CF8A27F38C8D00B9E8B1 /* VideoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF8927F38C8D00B9E8B1 /* VideoCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4172CF7D27F355A400B9E8B1 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 		4172CF7F27F355B300B9E8B1 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		4172CF8127F3575000B9E8B1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4172CF8927F38C8D00B9E8B1 /* VideoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				4172CF8127F3575000B9E8B1 /* MainView.swift */,
 				4172CF7D27F355A400B9E8B1 /* PictureView.swift */,
 				4172CF7F27F355B300B9E8B1 /* VideoView.swift */,
+				4172CF8927F38C8D00B9E8B1 /* VideoCardView.swift */,
 				4172CF7127F33F6D00B9E8B1 /* Assets.xcassets */,
 				4172CF7327F33F6D00B9E8B1 /* Preview Content */,
 				4172CF7B27F3421F00B9E8B1 /* Launch_Screen.storyboard */,
@@ -154,6 +157,7 @@
 				4172CF7E27F355A400B9E8B1 /* PictureView.swift in Sources */,
 				4172CF7027F33F6000B9E8B1 /* ContentView.swift in Sources */,
 				4172CF8227F3575000B9E8B1 /* MainView.swift in Sources */,
+				4172CF8A27F38C8D00B9E8B1 /* VideoCardView.swift in Sources */,
 				4172CF6E27F33F6000B9E8B1 /* ateliers_farsianiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
