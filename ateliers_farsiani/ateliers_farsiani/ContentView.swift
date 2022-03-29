@@ -9,16 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Circle()
-                .fill(
-                    RadialGradient(gradient: Gradient(colors: [.blue, Color("Gold")]), center: .center, startRadius: 50, endRadius: 100)
-                )
-                .frame(width: 200, height: 200)
-            VStack (alignment: .center) {
-                Image("Logo")
-            }
-        }
+        TabView {
+                    ContentView()
+                        .tabItem {
+                            Label("Menu", systemImage: "list.dash")
+                        }
+
+                    OrderView()
+                        .tabItem {
+                            Label("Order", systemImage: "square.and.pencil")
+                        }
+                }
     }
 }
 

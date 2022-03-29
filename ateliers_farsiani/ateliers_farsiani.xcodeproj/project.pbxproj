@@ -12,6 +12,8 @@
 		4172CF7227F33F6D00B9E8B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4172CF7127F33F6D00B9E8B1 /* Assets.xcassets */; };
 		4172CF7527F33F6D00B9E8B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4172CF7427F33F6D00B9E8B1 /* Preview Assets.xcassets */; };
 		4172CF7C27F3421F00B9E8B1 /* Launch_Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4172CF7B27F3421F00B9E8B1 /* Launch_Screen.storyboard */; };
+		4172CF7E27F355A400B9E8B1 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF7D27F355A400B9E8B1 /* PictureView.swift */; };
+		4172CF8027F355B300B9E8B1 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF7F27F355B300B9E8B1 /* VideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		4172CF7127F33F6D00B9E8B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4172CF7427F33F6D00B9E8B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4172CF7B27F3421F00B9E8B1 /* Launch_Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch_Screen.storyboard; sourceTree = "<group>"; };
+		4172CF7D27F355A400B9E8B1 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		4172CF7F27F355B300B9E8B1 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			children = (
 				4172CF6D27F33F6000B9E8B1 /* ateliers_farsianiApp.swift */,
 				4172CF6F27F33F6000B9E8B1 /* ContentView.swift */,
+				4172CF7D27F355A400B9E8B1 /* PictureView.swift */,
+				4172CF7F27F355B300B9E8B1 /* VideoView.swift */,
 				4172CF7127F33F6D00B9E8B1 /* Assets.xcassets */,
 				4172CF7327F33F6D00B9E8B1 /* Preview Content */,
 				4172CF7B27F3421F00B9E8B1 /* Launch_Screen.storyboard */,
@@ -141,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4172CF8027F355B300B9E8B1 /* VideoView.swift in Sources */,
+				4172CF7E27F355A400B9E8B1 /* PictureView.swift in Sources */,
 				4172CF7027F33F6000B9E8B1 /* ContentView.swift in Sources */,
 				4172CF6E27F33F6000B9E8B1 /* ateliers_farsianiApp.swift in Sources */,
 			);
