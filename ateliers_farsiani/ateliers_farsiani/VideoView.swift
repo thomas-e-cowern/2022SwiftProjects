@@ -9,10 +9,14 @@ import SwiftUI
 
 struct VideoView: View {
     
-    
+    var videos = ["balarinas", "runway"]
     
     var body: some View {
-        VideoCardView(videoTitle: "balarinas")
+        VStack (alignment: .center, spacing: 20) {
+            ForEach(videos, id: \.self) { video in
+                VideoCardView(videoTitle: video)
+            }
+        }
     }
 }
 
