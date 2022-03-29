@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct VideoView: View {
+    
+    
+    
     var body: some View {
-        Text("Video View")
+        VideoCardView(videoTitle: "balarinas")
     }
 }
 
