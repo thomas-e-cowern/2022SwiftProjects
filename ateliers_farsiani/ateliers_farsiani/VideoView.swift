@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VideoView: View {
     
-    var videos = ["balarinas", "runway"]
+    var videos = ["balarinas", "runway", "runwayback"]
     
     var body: some View {
         ScrollView (.vertical) {
