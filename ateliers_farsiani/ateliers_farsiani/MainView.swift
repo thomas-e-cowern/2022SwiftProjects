@@ -1,5 +1,5 @@
 //
-//  VideoView.swift
+//  MainView.swift
 //  ateliers_farsiani
 //
 //  Created by Thomas Cowern New on 3/29/22.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct VideoView: View {
+struct MainView: View {
     var body: some View {
-        Text("Video View")
+        Text("Main View")
     }
 }
 
-struct VideoView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoView()
+        MainView()
     }
 }
