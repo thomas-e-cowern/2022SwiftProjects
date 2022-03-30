@@ -10,6 +10,14 @@ import SwiftUI
 struct PictureView: View {
     
     @State private var images: [String] = ["BlkDressRunway", "BlkDressLegs", "BlkDressCar"]
+    @State private var openImage: Bool = false
+    
+    var tap: some Gesture {
+        TapGesture()
+            .onEnded {
+                openImage = true
+            }
+    }
     
     var body: some View {
         ScrollView (.horizontal, showsIndicators: false) {
@@ -19,6 +27,10 @@ struct PictureView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 300, alignment: .center)
+                        .gesture(tap)
+                }
+                .sheet(isPresented: $openImage) {
+                    ImageDetail()
                 }
             }
         }

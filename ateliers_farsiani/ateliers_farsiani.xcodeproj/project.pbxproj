@@ -20,6 +20,7 @@
 		4172CF8E27F38FAC00B9E8B1 /* runway.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4172CF8D27F38FAC00B9E8B1 /* runway.mov */; };
 		4172CF9027F3931C00B9E8B1 /* runwayback.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4172CF8F27F3931C00B9E8B1 /* runwayback.mov */; };
 		4172CF9227F4818E00B9E8B1 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF9127F4818D00B9E8B1 /* CreditView.swift */; };
+		4172CF9427F4970600B9E8B1 /* ImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF9327F4970600B9E8B1 /* ImageDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		4172CF8D27F38FAC00B9E8B1 /* runway.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = runway.mov; sourceTree = "<group>"; };
 		4172CF8F27F3931C00B9E8B1 /* runwayback.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = runwayback.mov; sourceTree = "<group>"; };
 		4172CF9127F4818D00B9E8B1 /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
+		4172CF9327F4970600B9E8B1 /* ImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				4172CF8127F3575000B9E8B1 /* MainView.swift */,
 				4172CF9127F4818D00B9E8B1 /* CreditView.swift */,
 				4172CF7D27F355A400B9E8B1 /* PictureView.swift */,
+				4172CF9327F4970600B9E8B1 /* ImageDetail.swift */,
 				4172CF7F27F355B300B9E8B1 /* VideoView.swift */,
 				4172CF8927F38C8D00B9E8B1 /* VideoCardView.swift */,
 				4172CF7127F33F6D00B9E8B1 /* Assets.xcassets */,
@@ -170,6 +173,7 @@
 			files = (
 				4172CF9227F4818E00B9E8B1 /* CreditView.swift in Sources */,
 				4172CF8027F355B300B9E8B1 /* VideoView.swift in Sources */,
+				4172CF9427F4970600B9E8B1 /* ImageDetail.swift in Sources */,
 				4172CF7E27F355A400B9E8B1 /* PictureView.swift in Sources */,
 				4172CF7027F33F6000B9E8B1 /* ContentView.swift in Sources */,
 				4172CF8227F3575000B9E8B1 /* MainView.swift in Sources */,
