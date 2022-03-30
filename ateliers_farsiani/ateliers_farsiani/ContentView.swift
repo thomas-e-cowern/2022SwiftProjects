@@ -23,6 +23,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Videos", systemImage: "video")
                 }
+            CreditView()
+                .tabItem {
+                    Label("Credits", systemImage: "list.bullet")
+                }
         }
     }
 }
