@@ -11,7 +11,11 @@ import SwiftUI
 struct ateliers_farsianiApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                ContentView()
+                
+                LaunchScreenView()
+            }
         }
     }
 }
