@@ -20,17 +20,19 @@ struct PictureView: View {
     }
     
     var body: some View {
-        ScrollView (.horizontal, showsIndicators: false) {
-            HStack (spacing: 10) {
-                ForEach(images, id: \.self) { image in
-                    Image(image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 300, alignment: .center)
-                        .gesture(tap)
-                }
-                .sheet(isPresented: $openImage) {
-                    ImageDetail()
+        NavigationView {
+            ScrollView (.horizontal, showsIndicators: false) {
+                HStack (spacing: 10) {
+                    ForEach(images, id: \.self) { image in
+                        NavigationLink {
+                            ImageDetailView(imageName: image)
+                        } label: {
+                            Image(image)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200, height: 300, alignment: .center)
+                        }
+                    }
                 }
             }
         }
