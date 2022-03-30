@@ -21,6 +21,7 @@
 		4172CF9027F3931C00B9E8B1 /* runwayback.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4172CF8F27F3931C00B9E8B1 /* runwayback.mov */; };
 		4172CF9227F4818E00B9E8B1 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF9127F4818D00B9E8B1 /* CreditView.swift */; };
 		4172CF9427F4970600B9E8B1 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF9327F4970600B9E8B1 /* ImageDetailView.swift */; };
+		4196A66D27F4DD250017F6AB /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196A66C27F4DD250017F6AB /* LaunchScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		4172CF8F27F3931C00B9E8B1 /* runwayback.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = runwayback.mov; sourceTree = "<group>"; };
 		4172CF9127F4818D00B9E8B1 /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
 		4172CF9327F4970600B9E8B1 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		4196A66C27F4DD250017F6AB /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				4172CF7127F33F6D00B9E8B1 /* Assets.xcassets */,
 				4172CF7327F33F6D00B9E8B1 /* Preview Content */,
 				4172CF7B27F3421F00B9E8B1 /* Launch_Screen.storyboard */,
+				4196A66C27F4DD250017F6AB /* LaunchScreen.swift */,
 				4172CF8B27F38D1F00B9E8B1 /* balarinas.mov */,
 				4172CF8D27F38FAC00B9E8B1 /* runway.mov */,
 				4172CF8F27F3931C00B9E8B1 /* runwayback.mov */,
@@ -173,6 +176,7 @@
 			files = (
 				4172CF9227F4818E00B9E8B1 /* CreditView.swift in Sources */,
 				4172CF8027F355B300B9E8B1 /* VideoView.swift in Sources */,
+				4196A66D27F4DD250017F6AB /* LaunchScreen.swift in Sources */,
 				4172CF9427F4970600B9E8B1 /* ImageDetailView.swift in Sources */,
 				4172CF7E27F355A400B9E8B1 /* PictureView.swift in Sources */,
 				4172CF7027F33F6000B9E8B1 /* ContentView.swift in Sources */,

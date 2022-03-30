@@ -12,7 +12,6 @@ struct ImageDetailView: View {
     var imageName: String
     
     var body: some View {
-        
         GeometryReader { geometry in
             VStack {
                 Image(imageName)
