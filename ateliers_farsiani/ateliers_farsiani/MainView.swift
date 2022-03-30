@@ -81,6 +81,21 @@ struct MainView: View {
                 .padding(5)
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
+                
+                Section (header: Text("Social Media")) {
+                    HStack {
+                        Link(destination: URL(string: "https://www.instagram.com/ateliers_farsiani/?r=nametag")!) {
+                            Image("instagram-logo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                        }
+                        Text("Follow us on Instagram")
+                    }                    
+                }
+                .padding(5)
+                .padding(.leading, 20)
+                .padding(.trailing, 20)
             }
         }
     }
