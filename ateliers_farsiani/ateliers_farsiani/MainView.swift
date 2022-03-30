@@ -21,21 +21,21 @@ struct MainView: View {
                         Image("AMFlag")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 100, height: 100)
+                            .frame(width: 45, height: 23)
                     }
                     VStack {
                         Text("Sweden")
                         Image("SwedenFlag")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 100, height: 100)
+                            .frame(width: 50, height: 25)
                     }
                     VStack {
                         Text("France")
                         Image("FrenchFlag")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 100, height: 100)
+                            .frame(width: 50, height: 25)
                     }
                 }
                 
