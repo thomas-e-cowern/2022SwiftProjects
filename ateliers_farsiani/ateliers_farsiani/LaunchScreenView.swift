@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct LaunchScreenView: View {
+    
+    @State private var loadingText: String = "Welcome to..."
+    @State private var showLoadingText: Bool = false
+    
     var body: some View {
         ZStack {
             Color.blue
@@ -17,6 +21,20 @@ struct LaunchScreenView: View {
                 .resizable()
                 .scaledToFit()
                 .padding(9)
+            
+            ZStack {
+                if showLoadingText {
+                    Text(loadingText)
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                        .transition(AnyTransition.scale.animation(.easeIn))
+                }
+            }
+            .offset(y: -100)
+        }
+        .onAppear {
+            showLoadingText.toggle()
         }
     }
 }
