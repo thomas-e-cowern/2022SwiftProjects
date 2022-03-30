@@ -15,6 +15,21 @@ struct MainView: View {
                 Text("Ateliers Farsiani")
                     .font(.largeTitle)
                 
+                Text("Leila Farsiani")
+                    .font(.title)
+                
+                Text("CEO & Founder")
+                    .font(.headline)
+               
+                Image("LCar")
+                    .resizable()
+                    .overlay(RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.orange, lineWidth: 4))
+                    .shadow(radius: 20)
+                    .cornerRadius(20)
+                    .scaledToFit()
+                    .padding()
+                
                 HStack {
                     VStack {
                         Text("USA")
@@ -39,21 +54,33 @@ struct MainView: View {
                     }
                 }
                 
-                
-                Text("Leila Farsiani")
-                    .font(.title)
-                
-                Text("CEO & Founder")
-                    .font(.headline)
-               
-                Image("LCar")
-                    .resizable()
-                    .overlay(RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.orange, lineWidth: 4))
-                    .shadow(radius: 20)
-                    .cornerRadius(20)
-                    .scaledToFit()
-                    .padding()
+                Spacer()
+                    .frame(height: 30)
+            
+                Section (header: Text("Contact Information")) {
+                    HStack {
+                        Text("Website:")
+                        Spacer()
+                        Link(destination: URL(string: "https://farsiani.com")!) {
+                            Text("www.farsiani.com")
+                        }
+                    }
+                    
+                    HStack {
+                        Text("Phone: ")
+                        Spacer()
+                        Text("Tel: 860-227-6656")
+                    }
+                    
+                    HStack {
+                        Text("Email:")
+                        Spacer()
+                        Text("Farsiani@farsiani.com")
+                    }
+                }
+                .padding(5)
+                .padding(.leading, 20)
+                .padding(.trailing, 20)
             }
         }
     }
