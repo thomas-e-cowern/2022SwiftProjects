@@ -11,9 +11,10 @@ struct LaunchScreenView: View {
     
     @State private var loadingText: String = "Welcome to..."
     @State private var showLoadingText: Bool = false
+    @Binding var showLaunchScreenView: Bool
     @State private var count: Int = 0
     
-    let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
+    private let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     
     
     var body: some View {
@@ -43,7 +44,7 @@ struct LaunchScreenView: View {
         .onReceive(timer) { _ in
             count += 1
             if count == 3 {
-                // Somtherin
+                showLaunchScreenView.toggle()
             }
         }
     }
@@ -51,6 +52,6 @@ struct LaunchScreenView: View {
 
 struct LaunchScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchScreenView()
+        LaunchScreenView(showLaunchScreenView: .constant(true))
     }
 }

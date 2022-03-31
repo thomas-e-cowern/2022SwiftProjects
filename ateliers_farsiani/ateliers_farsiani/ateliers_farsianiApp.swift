@@ -9,12 +9,23 @@ import SwiftUI
 
 @main
 struct ateliers_farsianiApp: App {
+    
+    @State private var showLaunchScreenView: Bool = true
+    
     var body: some Scene {
         WindowGroup {
             ZStack {
                 ContentView()
+//                    .zIndex(0)
                 
-                LaunchScreenView()
+                ZStack {
+                    if showLaunchScreenView {
+                        LaunchScreenView(showLaunchScreenView: $showLaunchScreenView)
+                            .transition(.slide)
+//                            .zIndex(2.0)
+                    }
+                }
+//                .zIndex(1.0)
             }
         }
     }
