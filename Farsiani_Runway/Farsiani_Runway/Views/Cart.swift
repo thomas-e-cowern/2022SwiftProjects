@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Cart.swift
 //  Farsiani_Runway
 //
 //  Created by Thomas Cowern New on 4/22/22.
@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Cart: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Cart_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Cart()
     }
 }
