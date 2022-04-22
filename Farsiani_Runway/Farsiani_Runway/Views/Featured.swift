@@ -10,16 +10,20 @@ import SwiftUI
 struct Featured: View {
     var body: some View {
         NavigationView {
-            Image("LCar")
-                .resizable()
-                .scaledToFit()
-            Text("Featured")
-                .toolbar {
-                    Button(action: {
-                        // Somthing to happen
-                    }, label: {
-                        Text("Catalog")
-                    })
+            ZStack {
+                Image(systemName: "bag.badge.plus")
+                    .foregroundColor(.red)
+                Image("LCar")
+                    .resizable()
+                    .scaledToFit()
+                    .toolbar {
+                        Button(action: {
+                            // Somthing to happen
+                        }, label: {
+                            Text("Catalog")
+                        })
+                }
+                
             }
         }
     }

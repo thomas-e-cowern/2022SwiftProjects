@@ -16,7 +16,6 @@
 		416FC8A32812E9BF00132C9C /* Wishlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416FC8A22812E9BF00132C9C /* Wishlist.swift */; };
 		416FC8A52812E9DA00132C9C /* Featured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416FC8A42812E9DA00132C9C /* Featured.swift */; };
 		416FC8A72812E9E800132C9C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416FC8A62812E9E800132C9C /* Video.swift */; };
-		416FC8AB2812FBF600132C9C /* LCar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 416FC8AA2812FBF600132C9C /* LCar.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 		416FC8A22812E9BF00132C9C /* Wishlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wishlist.swift; sourceTree = "<group>"; };
 		416FC8A42812E9DA00132C9C /* Featured.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Featured.swift; sourceTree = "<group>"; };
 		416FC8A62812E9E800132C9C /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		416FC8AA2812FBF600132C9C /* LCar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LCar.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +61,6 @@
 		416FC88F2812E20200132C9C /* Farsiani_Runway */ = {
 			isa = PBXGroup;
 			children = (
-				416FC8A92812FBE200132C9C /* Images */,
 				416FC8902812E20200132C9C /* Farsiani_RunwayApp.swift */,
 				416FC8A82812E9F500132C9C /* Views */,
 				416FC8942812E21400132C9C /* Assets.xcassets */,
@@ -91,14 +88,6 @@
 				416FC8A62812E9E800132C9C /* Video.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		416FC8A92812FBE200132C9C /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				416FC8AA2812FBF600132C9C /* LCar.jpg */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +150,6 @@
 			files = (
 				416FC8982812E21400132C9C /* Preview Assets.xcassets in Resources */,
 				416FC8952812E21400132C9C /* Assets.xcassets in Resources */,
-				416FC8AB2812FBF600132C9C /* LCar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
