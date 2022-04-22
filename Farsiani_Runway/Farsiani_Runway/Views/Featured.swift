@@ -11,17 +11,28 @@ struct Featured: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image(systemName: "bag.badge.plus")
-                    .foregroundColor(.red)
-                Image("LCar")
-                    .resizable()
-                    .scaledToFit()
-                    .toolbar {
-                        Button(action: {
-                            // Somthing to happen
-                        }, label: {
-                            Text("Catalog")
-                        })
+                
+
+                GeometryReader { geo in
+                    Image("LCar")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: geo.size.width, height: geo.size.height)
+                        .toolbar {
+                            Button(action: {
+                                // Somthing to happen
+                            }, label: {
+                                Text("Catalog")
+                            })
+                    }
+                }
+                VStack {
+                    Image(systemName: "bag.badge.plus")
+                        .foregroundColor(.white)
+                        .offset(x: 100, y: -10)
+                    Image(systemName: "bag.badge.plus")
+                        .foregroundColor(.white)
+                        .offset(y: -10)
                 }
                 
             }
