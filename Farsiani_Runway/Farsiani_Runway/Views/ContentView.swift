@@ -9,12 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
         TabView {
-            tabItem {
-                Label("Latest Show", systemImage: "eye.circle")
-            }
+            LatestShow()
+                .tabItem {
+                    Label("Latest Show", systemImage: "eye.circle")
+                }
+            Featured()
+                .tabItem {
+                    Label("Featured", systemImage: "pencil.and.outline")
+                }
+            Video()
+                .tabItem {
+                    Label("Video", systemImage: "video.circle")
+                }
+            Wishlist()
+                .tabItem {
+                    Label("Wishlist", systemImage: "arrow.clockwise.heart")
+                }
+            Cart()
+                .tabItem {
+                    Label("Cart", systemImage: "cart.circle")
+                }
         }
     }
 }
