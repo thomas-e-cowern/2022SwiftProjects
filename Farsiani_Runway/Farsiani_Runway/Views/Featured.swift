@@ -9,7 +9,16 @@ import SwiftUI
 
 struct Featured: View {
     var body: some View {
-        Text("Featured")
+        NavigationView {
+            Text("Featured")
+                .toolbar {
+                    Button(action: {
+                        // Somthing to happen
+                    }, label: {
+                        Text("Catalog")
+                    })
+            }
+        }
     }
 }
 

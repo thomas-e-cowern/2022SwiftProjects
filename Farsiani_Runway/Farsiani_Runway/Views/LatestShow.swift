@@ -9,7 +9,16 @@ import SwiftUI
 
 struct LatestShow: View {
     var body: some View {
-        Text("Latest Show")
+        NavigationView {
+            Text("Latest Show")
+                .toolbar {
+                    Button(action: {
+                        // Somthing to happen
+                    }, label: {
+                        Label("Catalog", systemImage: "tshirt.fill")
+                    })
+                }
+        }
     }
 }
 
