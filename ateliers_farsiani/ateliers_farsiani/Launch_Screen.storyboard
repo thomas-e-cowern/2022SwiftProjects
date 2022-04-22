@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,30 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDm-L4-P4i">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FarsianiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="DjQ-X8-XWC">
-                                        <rect key="frame" x="10" y="189.5" width="394" height="439"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="DjQ-X8-XWC" firstAttribute="leading" secondItem="qDm-L4-P4i" secondAttribute="leading" constant="10" id="SJv-dq-uhP"/>
-                                    <constraint firstAttribute="trailing" secondItem="DjQ-X8-XWC" secondAttribute="trailing" constant="10" id="Uim-Xz-6XI"/>
-                                    <constraint firstItem="DjQ-X8-XWC" firstAttribute="centerY" secondItem="qDm-L4-P4i" secondAttribute="centerY" id="kU7-vl-lhD"/>
-                                    <constraint firstItem="DjQ-X8-XWC" firstAttribute="centerX" secondItem="qDm-L4-P4i" secondAttribute="centerX" id="opv-os-ppx"/>
-                                </constraints>
-                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FarsianiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="3iK-WK-vVv">
+                                <rect key="frame" x="20" y="770" width="374" height="92"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <color key="backgroundColor" red="0.82520515360000002" green="0.95200948789999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qDm-L4-P4i" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" id="IvW-j3-D0x"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="qDm-L4-P4i" secondAttribute="trailing" id="Pmo-s3-AO7"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="qDm-L4-P4i" secondAttribute="bottom" id="aqB-ex-vDu"/>
-                            <constraint firstItem="qDm-L4-P4i" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="dcV-hf-Hd5"/>
+                            <constraint firstItem="3iK-WK-vVv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="AME-ch-l9n"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="3iK-WK-vVv" secondAttribute="trailing" constant="20" id="QG5-fJ-bo0"/>
+                            <constraint firstItem="3iK-WK-vVv" firstAttribute="bottom" secondItem="Bcu-3y-fUS" secondAttribute="bottom" id="ts2-ox-u6N"/>
+                            <constraint firstItem="3iK-WK-vVv" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" id="uc7-8P-xYm"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -50,8 +37,5 @@
     </scenes>
     <resources>
         <image name="FarsianiLogo" width="2159" height="439"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

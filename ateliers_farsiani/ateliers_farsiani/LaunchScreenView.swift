@@ -19,24 +19,24 @@ struct LaunchScreenView: View {
     
     var body: some View {
         ZStack {
-            Color.blue
+            Color.white
                 .ignoresSafeArea()
-            
+            Spacer()
             Image("FarsianiLogo")
                 .resizable()
                 .scaledToFit()
                 .padding(9)
             
-            ZStack {
-                if showLoadingText {
-                    Text(loadingText)
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .transition(AnyTransition.scale.animation(.easeIn))
-                }
-            }
-            .offset(y: -100)
+//            ZStack {
+//                if showLoadingText {
+//                    Text(loadingText)
+//                        .font(.headline)
+//                        .fontWeight(.bold)
+//                        .foregroundColor(Color.white)
+//                        .transition(AnyTransition.scale.animation(.easeIn))
+//                }
+//            }
+//            .offset(y: -100)
         }
         .onAppear {
             showLoadingText.toggle()

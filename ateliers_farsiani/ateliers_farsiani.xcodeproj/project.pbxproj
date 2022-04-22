@@ -22,6 +22,7 @@
 		4172CF9227F4818E00B9E8B1 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF9127F4818D00B9E8B1 /* CreditView.swift */; };
 		4172CF9427F4970600B9E8B1 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4172CF9327F4970600B9E8B1 /* ImageDetailView.swift */; };
 		4196A66F27F4E5570017F6AB /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196A66E27F4E5570017F6AB /* LaunchScreenView.swift */; };
+		41F4E0C9280A4AF400633B7A /* ClothingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F4E0C8280A4AF400633B7A /* ClothingDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		4172CF9127F4818D00B9E8B1 /* CreditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
 		4172CF9327F4970600B9E8B1 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		4196A66E27F4E5570017F6AB /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		41F4E0C8280A4AF400633B7A /* ClothingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				4172CF8D27F38FAC00B9E8B1 /* runway.mov */,
 				4172CF8F27F3931C00B9E8B1 /* runwayback.mov */,
 				4196A66E27F4E5570017F6AB /* LaunchScreenView.swift */,
+				41F4E0C8280A4AF400633B7A /* ClothingDetailView.swift */,
 			);
 			path = ateliers_farsiani;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				4172CF8A27F38C8D00B9E8B1 /* VideoCardView.swift in Sources */,
 				4172CF6E27F33F6000B9E8B1 /* ateliers_farsianiApp.swift in Sources */,
 				4196A66F27F4E5570017F6AB /* LaunchScreenView.swift in Sources */,
+				41F4E0C9280A4AF400633B7A /* ClothingDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

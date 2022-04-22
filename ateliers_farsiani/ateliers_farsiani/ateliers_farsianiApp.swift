@@ -16,17 +16,16 @@ struct ateliers_farsianiApp: App {
         WindowGroup {
             ZStack {
                 ContentView()
-//                    .zIndex(0)
                 
                 ZStack {
                     if showLaunchScreenView {
                         LaunchScreenView(showLaunchScreenView: $showLaunchScreenView)
-                            .transition(.slide)
-//                            .zIndex(2.0)
+                            .transition(AnyTransition.opacity.combined(with: .slide))
                     }
                 }
-//                .zIndex(1.0)
+                .zIndex(2)
             }
+            .zIndex(0)
         }
     }
 }
