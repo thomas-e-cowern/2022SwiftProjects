@@ -36,10 +36,10 @@ struct Featured: View {
                         }
                         .offset(x: 30, y: -70)
                     }
-                    Text("Shirt: $234.56")
-                        .padding(2)
-                        .background(.yellow)
-                        .clipShape(Capsule())
+//                    Text("Shirt: $234.56")
+//                        .padding(5)
+//                        .background(.yellow)
+//                        .clipShape(Capsule())
                         
                     
                     
