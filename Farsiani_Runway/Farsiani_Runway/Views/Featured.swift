@@ -35,6 +35,8 @@ struct Featured: View {
                                 .foregroundColor(.white)
                         }
                         .offset(x: 30, y: -70)
+                        
+                        PriceDetailView()
                     }
 //                    Text("Shirt: $234.56")
 //                        .padding(5)

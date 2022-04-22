@@ -10,16 +10,29 @@ import SwiftUI
 struct PriceDetailView: View {
     var body: some View {
         VStack {
-            Text("Long Sleeve Top")
-            Text("$123.45")
-            Button {
-                // add to cart
-            } label: {
-                Image(systemName: "cart.badge.plus")
-            }
+            HStack {
+                Spacer()
+                Button {
+                    // close
+                } label: {
+                    Image(systemName: "xmark.circle")
+                }
 
+            }
+            Text("Long Sleeve Top")
+            HStack {
+                Text("$123.45")
+                Button {
+                    print("Adding to cart")
+                } label: {
+                    Image(systemName: "cart.badge.plus")
+                }
+            }
         }
-        
+        .padding(4)
+        .background(.yellow)
+        .cornerRadius(5)
+        .frame(width: 150, height: 50)
     }
 }
 
