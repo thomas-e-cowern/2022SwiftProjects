@@ -27,14 +27,31 @@ struct Featured: View {
                     }
                 }
                 VStack {
-                    Image(systemName: "bag.badge.plus")
-                        .foregroundColor(.white)
-                        .offset(x: 100, y: -10)
-                    Image(systemName: "bag.badge.plus")
-                        .foregroundColor(.white)
-                        .offset(y: -10)
+                    HStack {
+                        Button {
+                            print("Shirt Price")
+                        } label: {
+                            Image(systemName: "bag.badge.plus")
+                                .foregroundColor(.white)
+                        }
+                        .offset(x: 30, y: -70)
+                    }
+                    Text("Shirt: $234.56")
+                        .padding(2)
+                        .background(.yellow)
+                        .clipShape(Capsule())
+                        
+                    
+                    
+
+                    Button {
+                        print("Skirt Price")
+                    } label: {
+                        Image(systemName: "bag.badge.plus")
+                            .foregroundColor(.white)
+                    }
+                    .offset(x: 10, y: -10)
                 }
-                
             }
         }
     }
