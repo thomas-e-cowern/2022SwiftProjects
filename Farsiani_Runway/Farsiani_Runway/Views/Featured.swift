@@ -10,6 +10,9 @@ import SwiftUI
 struct Featured: View {
     var body: some View {
         NavigationView {
+            Image("LCar")
+                .resizable()
+                .scaledToFit()
             Text("Featured")
                 .toolbar {
                     Button(action: {
