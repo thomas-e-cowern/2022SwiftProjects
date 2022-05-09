@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        Text("The Party is Over!")
+            .padding()
+        Text("Get Ready,")
+            .padding()
+        Text("Get Set,")
+            .padding()
+        Text("and go...")
             .padding()
     }
 }
