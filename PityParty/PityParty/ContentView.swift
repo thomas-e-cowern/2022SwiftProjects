@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var timeRemaining = 60
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
+        
+        Text("\(timeRemaining)")
+            .onReceive(timer) { _ in
+                if timeRemaining > 0 {
+                    timeRemaining -= 1
+                }
+            }
+        
+        
         Text("The Party is Over!")
             .padding()
+            .hidden()
         Text("Get Ready,")
             .padding()
             .hidden()
