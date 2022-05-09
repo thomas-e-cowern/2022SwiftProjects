@@ -11,19 +11,27 @@ struct ContentView: View {
     
     @State var timeRemaining = 60
     @State var showMessage: Bool = false
+    @State var showTimer: Bool = true
+    
     let partyTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     
     var body: some View {
         
-        Text("\(timeRemaining)")
-            .onReceive(partyTimer) { _ in
-                if timeRemaining > 0 {
-                    timeRemaining -= 1
-                } else {
-                    showMessage.toggle()
+        VStack {
+            if showTimer {
+                Text("\(timeRemaining)")
+                .onReceive(partyTimer) { _ in
+                    if timeRemaining > 0 {
+                        timeRemaining -= 1
+                    } else {
+                        self.partyTimer.upstream.connect().cancel()
+                        showMessage.toggle()
+                        showTimer.toggle()
+                    }
                 }
             }
+        }
         
         VStack {
             if showMessage {
@@ -41,8 +49,14 @@ struct ContentView: View {
                         .padding()
 
                 }
-            } else {
-                Text("Ooops")
+            }
+        }
+            
+        VStack {
+            Button {
+                timeRemaining = 60
+            } label: {
+                Text("Reset Timer")
             }
         }
     }
