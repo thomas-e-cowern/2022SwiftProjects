@@ -10,30 +10,41 @@ import SwiftUI
 struct ContentView: View {
     
     @State var timeRemaining = 60
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var showMessage: Bool = false
+    let partyTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     
     var body: some View {
         
         Text("\(timeRemaining)")
-            .onReceive(timer) { _ in
+            .onReceive(partyTimer) { _ in
                 if timeRemaining > 0 {
                     timeRemaining -= 1
+                } else {
+                    showMessage.toggle()
                 }
             }
         
-        
-        Text("The Party is Over!")
-            .padding()
-            .hidden()
-        Text("Get Ready,")
-            .padding()
-            .hidden()
-        Text("Get Set,")
-            .padding()
-            .hidden()
-        Text("and go...")
-            .padding()
-            .hidden()
+        VStack {
+            if showMessage {
+                VStack {
+                    Text("The Party is Over!")
+                        .padding()
+
+                    Text("Get Ready,")
+                        .padding()
+
+                    Text("Get Set,")
+                        .padding()
+
+                    Text("and go...")
+                        .padding()
+
+                }
+            } else {
+                Text("Ooops")
+            }
+        }
     }
 }
 
