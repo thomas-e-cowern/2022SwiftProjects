@@ -13,10 +13,13 @@ struct ContentView: View {
             .padding()
         Text("Get Ready,")
             .padding()
+            .hidden()
         Text("Get Set,")
             .padding()
+            .hidden()
         Text("and go...")
             .padding()
+            .hidden()
     }
 }
 
