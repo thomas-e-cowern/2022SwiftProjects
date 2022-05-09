@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var timeRemaining = 60
     @State var showMessage: Bool = false
     @State var showTimer: Bool = true
+    @State var startTimer: Bool = true
     
     let partyTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -47,7 +48,6 @@ struct ContentView: View {
 
                     Text("and go...")
                         .padding()
-
                 }
             }
         }
@@ -55,6 +55,8 @@ struct ContentView: View {
         VStack {
             Button {
                 timeRemaining = 60
+                showMessage = false
+                showTimer = true
             } label: {
                 Text("Reset Timer")
             }
