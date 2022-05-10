@@ -10,6 +10,7 @@ import SwiftUI
 struct PityView: View {
     
     @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var presentationMode
     
     @State var timeRemaining = 60
     @State var showMessage: Bool = false
@@ -41,6 +42,16 @@ struct PityView: View {
                             showResetBUtton.toggle()
                         }
                     }
+                    .navigationBarBackButtonHidden(true)
+                    .toolbar {
+                        ToolbarItem (placement: .navigation) {
+                            Image(systemName: "arrow.left")
+                                .foregroundColor(.white)
+                                .onTapGesture {
+                                    self.presentationMode.wrappedValue.dismiss()
+                                }
+                        }
+                    }
                 }
             }
             
@@ -58,6 +69,16 @@ struct PityView: View {
 
                         Text("and go...")
                             .padding()
+                    }
+                    .navigationBarBackButtonHidden(true)
+                    .toolbar {
+                        ToolbarItem (placement: .navigation) {
+                            Image(systemName: "arrow.left")
+                                .foregroundColor(.white)
+                                .onTapGesture {
+                                    self.presentationMode.wrappedValue.dismiss()
+                                }
+                        }
                     }
                 }
             }
