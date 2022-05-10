@@ -18,49 +18,52 @@ struct PityView: View {
     
     
     var body: some View {
-        
         VStack {
-            if showTimer {
-                Text("\(timeRemaining)")
-                .onReceive(partyTimer) { _ in
-                    if timeRemaining > 0 {
-                        timeRemaining -= 1
-                    } else {
-                        self.partyTimer.upstream.connect().cancel()
-                        showMessage.toggle()
-                        showTimer.toggle()
+            VStack {
+                if showTimer {
+                    Text("\(timeRemaining)")
+                    .onReceive(partyTimer) { _ in
+                        if timeRemaining > 0 {
+                            timeRemaining -= 1
+                        } else {
+                            self.partyTimer.upstream.connect().cancel()
+                            showMessage.toggle()
+                            showTimer.toggle()
+                        }
                     }
                 }
             }
-        }
-        
-        VStack {
-            if showMessage {
-                VStack {
-                    Text("The Party is Over!")
-                        .padding()
+            
+            VStack {
+                if showMessage {
+                    VStack {
+                        Text("The Party is Over!")
+                            .padding()
 
-                    Text("Get Ready,")
-                        .padding()
+                        Text("Get Ready,")
+                            .padding()
 
-                    Text("Get Set,")
-                        .padding()
+                        Text("Get Set,")
+                            .padding()
 
-                    Text("and go...")
-                        .padding()
+                        Text("and go...")
+                            .padding()
+                    }
+                }
+            }
+                
+            VStack {
+                Button {
+                    timeRemaining = 60
+                    showMessage = false
+                    showTimer = true
+                } label: {
+                    Text("Reset Timer")
                 }
             }
         }
-            
-        VStack {
-            Button {
-                timeRemaining = 60
-                showMessage = false
-                showTimer = true
-            } label: {
-                Text("Reset Timer")
-            }
-        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.blue)
     }
 }
 
