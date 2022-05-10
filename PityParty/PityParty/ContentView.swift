@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var showPityView: Bool = false
+    @State private var showInfoView: Bool = false
     
     var body: some View {
         
@@ -33,11 +34,13 @@ struct ContentView: View {
             .navigationTitle("Pity Party")
             .toolbar {
                 ToolbarItem {
-                    Button {
-                        // info button
-                    } label: {
-                        HStack {
-                            Image(systemName: "questionmark.circle")
+                    NavigationLink(destination: InfoView(), isActive: $showInfoView) {
+                        Button {
+                            self.showInfoView = true
+                        } label: {
+                            HStack {
+                                Image(systemName: "questionmark.circle")
+                            }
                         }
                     }
                 }
