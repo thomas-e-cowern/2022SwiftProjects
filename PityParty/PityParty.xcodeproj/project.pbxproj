@@ -11,6 +11,7 @@
 		4118A1CF2829776100F83BF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4118A1CE2829776100F83BF3 /* ContentView.swift */; };
 		4118A1D12829776C00F83BF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4118A1D02829776C00F83BF3 /* Assets.xcassets */; };
 		4118A1D42829776C00F83BF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4118A1D32829776C00F83BF3 /* Preview Assets.xcassets */; };
+		41F24CA1282A7C4900E4EE51 /* PityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F24CA0282A7C4900E4EE51 /* PityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4118A1CE2829776100F83BF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4118A1D02829776C00F83BF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4118A1D32829776C00F83BF3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41F24CA0282A7C4900E4EE51 /* PityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				4118A1CC2829776100F83BF3 /* PityPartyApp.swift */,
 				4118A1CE2829776100F83BF3 /* ContentView.swift */,
+				41F24CA0282A7C4900E4EE51 /* PityView.swift */,
 				4118A1D02829776C00F83BF3 /* Assets.xcassets */,
 				4118A1D22829776C00F83BF3 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F24CA1282A7C4900E4EE51 /* PityView.swift in Sources */,
 				4118A1CF2829776100F83BF3 /* ContentView.swift in Sources */,
 				4118A1CD2829776100F83BF3 /* PityPartyApp.swift in Sources */,
 			);
