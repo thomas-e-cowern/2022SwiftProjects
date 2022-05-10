@@ -15,7 +15,7 @@ struct PityView: View {
     @State var showMessage: Bool = false
     @State var showTimer: Bool = true
     @State var startTimer: Bool = true
-    @State var backgroundColor: String = ""
+    @State var backgroundColor: String = "Gray1"
     @State var showResetBUtton: Bool = false
     
     let partyTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
