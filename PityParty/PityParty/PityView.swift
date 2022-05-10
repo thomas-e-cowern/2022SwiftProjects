@@ -13,8 +13,10 @@ struct PityView: View {
     @State var showMessage: Bool = false
     @State var showTimer: Bool = true
     @State var startTimer: Bool = true
+    @State var backgroundColor: String = ""
     
     let partyTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     
     
     var body: some View {
@@ -22,10 +24,14 @@ struct PityView: View {
             VStack {
                 if showTimer {
                     Text("\(timeRemaining)")
+                        .foregroundColor(.white)
+                        .font(.title)
+                        .fontWeight(.heavy)
                     .onReceive(partyTimer) { _ in
                         if timeRemaining > 0 {
                             timeRemaining -= 1
                             print(randomizeColor())
+                            self.backgroundColor = randomizeColor()
                         } else {
                             self.partyTimer.upstream.connect().cancel()
                             showMessage.toggle()
@@ -64,16 +70,17 @@ struct PityView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.blue)
+        .background(Color(backgroundColor))
         .ignoresSafeArea(.all)
     }
     
-    func randomizeColor () {
+    func randomizeColor () -> String {
         let colors: [String] = ["Gray1", "Gray2", "Gray3", "Gray4", "Gray5"]
         
         let color = colors[Int.random(in: 0..<colors.count)]
         
-        print("The color is \(color)")
+        return color
+
     }
 }
 
