@@ -9,24 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var showPityView: Bool = false
+    
     var body: some View {
+        
         NavigationView {
             VStack {
                 Text("Ready for Pity?")
                     .font(.title)
                     .fontWeight(.bold)
                 
-                Button {
-                    // start the timer
-                } label: {
-                    Text("Begin")
-                        .frame(width: 150, height: 150)
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .font(.title)
+                NavigationLink(destination: PityView(), isActive: $showPityView) {
+                    Button ("Begin") {
+                        self.showPityView = true
+                    }
+                    .frame(width: 150, height: 150)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color("Gray1"), Color("Gray5")]), startPoint: .leading, endPoint: .trailing))
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .cornerRadius(75)
                 }
-                .cornerRadius(75)
-
             }
             .navigationTitle("Pity Party")
             .toolbar {
