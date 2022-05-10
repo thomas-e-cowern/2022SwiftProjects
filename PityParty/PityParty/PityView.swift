@@ -25,6 +25,7 @@ struct PityView: View {
                     .onReceive(partyTimer) { _ in
                         if timeRemaining > 0 {
                             timeRemaining -= 1
+                            print(randomizeColor())
                         } else {
                             self.partyTimer.upstream.connect().cancel()
                             showMessage.toggle()
@@ -64,6 +65,15 @@ struct PityView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.blue)
+        .ignoresSafeArea(.all)
+    }
+    
+    func randomizeColor () {
+        let colors: [String] = ["Gray1", "Gray2", "Gray3", "Gray4", "Gray5"]
+        
+        let color = colors[Int.random(in: 0..<colors.count)]
+        
+        print("The color is \(color)")
     }
 }
 
