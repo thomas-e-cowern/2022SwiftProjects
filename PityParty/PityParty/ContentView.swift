@@ -15,7 +15,7 @@ struct ContentView: View {
         
         NavigationView {
             VStack {
-                Text("Ready for Pity?")
+                Text("Ready for Some Pity?")
                     .font(.title)
                     .fontWeight(.bold)
                 
