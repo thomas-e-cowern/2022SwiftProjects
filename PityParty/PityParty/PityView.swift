@@ -45,11 +45,16 @@ struct PityView: View {
                     .navigationBarBackButtonHidden(true)
                     .toolbar {
                         ToolbarItem (placement: .navigation) {
-                            Image(systemName: "arrow.left")
-                                .foregroundColor(.white)
-                                .onTapGesture {
-                                    self.presentationMode.wrappedValue.dismiss()
+                            Button {
+                                self.presentationMode.wrappedValue.dismiss()
+                            } label: {
+                                HStack {
+                                    Image(systemName: "arrow.left")
+                                        .foregroundColor(.white)
+                                    Text("Back")
+                                        .foregroundColor(.white)
                                 }
+                            }
                         }
                     }
                 }
@@ -73,11 +78,16 @@ struct PityView: View {
                     .navigationBarBackButtonHidden(true)
                     .toolbar {
                         ToolbarItem (placement: .navigation) {
-                            Image(systemName: "arrow.left")
-                                .foregroundColor(.white)
-                                .onTapGesture {
-                                    self.presentationMode.wrappedValue.dismiss()
+                            Button {
+                                self.presentationMode.wrappedValue.dismiss()
+                            } label: {
+                                HStack {
+                                    Image(systemName: "arrow.left")
+                                        .foregroundColor(.white)
+                                    Text("Back")
+                                        .foregroundColor(.white)
                                 }
+                            }
                         }
                     }
                 }
@@ -89,6 +99,7 @@ struct PityView: View {
                         dismiss()
                     } label: {
                         Text("Reset Timer")
+                            .foregroundColor(.white)
                     }
                 }
             }
