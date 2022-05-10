@@ -9,56 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var timeRemaining = 60
-    @State var showMessage: Bool = false
-    @State var showTimer: Bool = true
-    @State var startTimer: Bool = true
-    
-    let partyTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
-    
     var body: some View {
-        
-        VStack {
-            if showTimer {
-                Text("\(timeRemaining)")
-                .onReceive(partyTimer) { _ in
-                    if timeRemaining > 0 {
-                        timeRemaining -= 1
-                    } else {
-                        self.partyTimer.upstream.connect().cancel()
-                        showMessage.toggle()
-                        showTimer.toggle()
+        NavigationView {
+            VStack {
+                Text("Ready for Pity?")
+                Button {
+                    // start the timer
+                } label: {
+                    Text("Begin")
+                }
+
+            }
+            .navigationTitle("Pity Party")
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        // info button
+                    } label: {
+                        HStack {
+                            Image(systemName: "questionmark.circle")
+                        }
                     }
                 }
-            }
-        }
-        
-        VStack {
-            if showMessage {
-                VStack {
-                    Text("The Party is Over!")
-                        .padding()
-
-                    Text("Get Ready,")
-                        .padding()
-
-                    Text("Get Set,")
-                        .padding()
-
-                    Text("and go...")
-                        .padding()
-                }
-            }
-        }
-            
-        VStack {
-            Button {
-                timeRemaining = 60
-                showMessage = false
-                showTimer = true
-            } label: {
-                Text("Reset Timer")
             }
         }
     }
