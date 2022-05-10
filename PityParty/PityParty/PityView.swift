@@ -9,11 +9,14 @@ import SwiftUI
 
 struct PityView: View {
     
+    @Environment(\.dismiss) var dismiss
+    
     @State var timeRemaining = 60
     @State var showMessage: Bool = false
     @State var showTimer: Bool = true
     @State var startTimer: Bool = true
     @State var backgroundColor: String = ""
+    @State var showResetBUtton: Bool = false
     
     let partyTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -30,12 +33,12 @@ struct PityView: View {
                     .onReceive(partyTimer) { _ in
                         if timeRemaining > 0 {
                             timeRemaining -= 1
-                            print(randomizeColor())
                             self.backgroundColor = randomizeColor()
                         } else {
                             self.partyTimer.upstream.connect().cancel()
                             showMessage.toggle()
                             showTimer.toggle()
+                            showResetBUtton.toggle()
                         }
                     }
                 }
@@ -59,13 +62,13 @@ struct PityView: View {
                 }
             }
                 
-            VStack {
-                Button {
-                    timeRemaining = 60
-                    showMessage = false
-                    showTimer = true
-                } label: {
-                    Text("Reset Timer")
+            if showResetBUtton {
+                VStack {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Reset Timer")
+                    }
                 }
             }
         }
