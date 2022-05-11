@@ -10,8 +10,24 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            Text("Hello, world!")
-                .padding()
+            ForEach(0..<10) { _ in
+                NavigationLink(destination: Text("Second View")) {
+                    Text("Hello World")
+                        .padding()
+                }
+            }
+            .navigationTitle("News Reader")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem (placement: .navigationBarTrailing) {
+                    Button {
+                        // Refresh
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                    }
+
+                }
+            }
         }
     }
 }
