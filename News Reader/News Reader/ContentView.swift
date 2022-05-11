@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    private var storyList: [String] = ["First Story", "Second Story", "Third Story", "Fourth Story", "Fifth Story"]
+    private var storyList: [String] = ["First Story", "Second Story", "Third Story", "Fourth Story", "Fifth Story", "Sixth Story"]
     
     var body: some View {
         NavigationView {

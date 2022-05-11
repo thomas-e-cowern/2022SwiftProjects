@@ -12,7 +12,16 @@ struct ListStoryView: View {
     @State var title: String
     
     var body: some View {
-        Text(title)
+        VStack (alignment: .center) {
+            Text(title)
+                .font(.title)
+            
+            Image("newspaper")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50, height: 50, alignment: .center)
+
+        }
     }
 }
 
