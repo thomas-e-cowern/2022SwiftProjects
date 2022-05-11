@@ -40,6 +40,7 @@ struct ContentView: View {
                         } label: {
                             HStack {
                                 Image(systemName: "questionmark.circle")
+                                    .foregroundColor(.black)
                             }
                         }
                     }
