@@ -13,6 +13,8 @@
 		419AFD36282C310200E2514C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419AFD35282C310200E2514C /* Preview Assets.xcassets */; };
 		419AFD3D282C31C100E2514C /* Credits.json in Resources */ = {isa = PBXBuildFile; fileRef = 419AFD3C282C31C100E2514C /* Credits.json */; };
 		419AFD40282C3A0300E2514C /* ListStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419AFD3F282C3A0300E2514C /* ListStoryView.swift */; };
+		419AFD43282C44E300E2514C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 419AFD42282C44E300E2514C /* Alamofire */; };
+		419AFD45282C451F00E2514C /* HelperFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419AFD44282C451F00E2514C /* HelperFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		419AFD3C282C31C100E2514C /* Credits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Credits.json; sourceTree = "<group>"; };
 		419AFD3E282C333D00E2514C /* News-Reader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "News-Reader-Info.plist"; sourceTree = SOURCE_ROOT; };
 		419AFD3F282C3A0300E2514C /* ListStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStoryView.swift; sourceTree = "<group>"; };
+		419AFD44282C451F00E2514C /* HelperFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419AFD43282C44E300E2514C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				419AFD3E282C333D00E2514C /* News-Reader-Info.plist */,
 				419AFD2E282C30F900E2514C /* News_ReaderApp.swift */,
 				419AFD30282C30F900E2514C /* ContentView.swift */,
+				419AFD44282C451F00E2514C /* HelperFile.swift */,
 				419AFD3F282C3A0300E2514C /* ListStoryView.swift */,
 				419AFD3C282C31C100E2514C /* Credits.json */,
 				419AFD32282C310200E2514C /* Assets.xcassets */,
@@ -91,6 +96,9 @@
 			dependencies = (
 			);
 			name = "News Reader";
+			packageProductDependencies = (
+				419AFD42282C44E300E2514C /* Alamofire */,
+			);
 			productName = "News Reader";
 			productReference = 419AFD2B282C30F900E2514C /* News Reader.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +127,9 @@
 				Base,
 			);
 			mainGroup = 419AFD22282C30F800E2514C;
+			packageReferences = (
+				419AFD41282C44E300E2514C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 419AFD2C282C30F900E2514C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,6 +160,7 @@
 				419AFD31282C30F900E2514C /* ContentView.swift in Sources */,
 				419AFD2F282C30F900E2514C /* News_ReaderApp.swift in Sources */,
 				419AFD40282C3A0300E2514C /* ListStoryView.swift in Sources */,
+				419AFD45282C451F00E2514C /* HelperFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		419AFD41282C44E300E2514C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		419AFD42282C44E300E2514C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 419AFD41282C44E300E2514C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 419AFD23282C30F800E2514C /* Project object */;
 }
