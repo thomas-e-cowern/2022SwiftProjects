@@ -16,9 +16,19 @@ struct ContentView: View {
         
         NavigationView {
             VStack {
+                Image("boat")
+                    .resizable()
+                    .frame(maxWidth: .infinity, maxHeight: 150)
+                    .padding()
+                
+                Spacer()
+                
                 Text("Ready for Some Pity?")
                     .font(.title)
                     .fontWeight(.bold)
+                
+                Spacer()
+                    .frame(height: 100)
                 
                 NavigationLink(destination: PityView(), isActive: $showPityView) {
                     Button ("Begin") {
@@ -30,8 +40,12 @@ struct ContentView: View {
                     .font(.title)
                     .cornerRadius(75)
                 }
+                
+                Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle("Pity Party")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
                     NavigationLink(destination: InfoView(), isActive: $showInfoView) {
