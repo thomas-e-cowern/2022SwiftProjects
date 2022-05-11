@@ -9,7 +9,15 @@ import SwiftUI
 
 struct InfoView: View {
     var body: some View {
+        
+        VStack {
+            Image("world")
+                .resizable()
+                .frame(maxWidth: .infinity, maxHeight: 200)
+        }
+        
         VStack (alignment: .leading) {
+            
             Text("How to use Pity Party:")
                 .padding(.bottom, 10)
                 .font(.largeTitle)
