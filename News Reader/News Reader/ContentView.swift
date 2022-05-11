@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    let hp = HelperFile()
+    
     private var storyList: [String] = ["First Story", "Second Story", "Third Story", "Fourth Story", "Fifth Story", "Sixth Story"]
     
     var body: some View {
@@ -26,6 +28,7 @@ struct ContentView: View {
                 ToolbarItem (placement: .navigationBarTrailing) {
                     Button {
                         // Refresh
+                        hp.getArticles()
                     } label: {
                         Image(systemName: "arrow.clockwise")
                     }
