@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private var storyList: [String] = ["First Story", "Second Story", "Third Story", "Fourth Story", "Fifth Story"]
+    
     var body: some View {
         NavigationView {
-            ForEach(0..<10) { _ in
-                NavigationLink(destination: Text("Second View")) {
-                    Text("Hello World")
-                        .padding()
+            List {
+                ForEach(storyList, id: \.self) { story in
+                    NavigationLink(destination: ListStoryView(title: story)) {
+                        ListStoryView(title: story)
+                    }
                 }
             }
             .navigationTitle("News Reader")
@@ -25,7 +29,6 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "arrow.clockwise")
                     }
-
                 }
             }
         }

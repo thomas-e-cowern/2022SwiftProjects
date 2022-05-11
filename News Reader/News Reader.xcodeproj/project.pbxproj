@@ -12,6 +12,7 @@
 		419AFD33282C310200E2514C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419AFD32282C310200E2514C /* Assets.xcassets */; };
 		419AFD36282C310200E2514C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419AFD35282C310200E2514C /* Preview Assets.xcassets */; };
 		419AFD3D282C31C100E2514C /* Credits.json in Resources */ = {isa = PBXBuildFile; fileRef = 419AFD3C282C31C100E2514C /* Credits.json */; };
+		419AFD40282C3A0300E2514C /* ListStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419AFD3F282C3A0300E2514C /* ListStoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		419AFD35282C310200E2514C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		419AFD3C282C31C100E2514C /* Credits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Credits.json; sourceTree = "<group>"; };
 		419AFD3E282C333D00E2514C /* News-Reader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "News-Reader-Info.plist"; sourceTree = SOURCE_ROOT; };
+		419AFD3F282C3A0300E2514C /* ListStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				419AFD3E282C333D00E2514C /* News-Reader-Info.plist */,
 				419AFD2E282C30F900E2514C /* News_ReaderApp.swift */,
 				419AFD30282C30F900E2514C /* ContentView.swift */,
+				419AFD3F282C3A0300E2514C /* ListStoryView.swift */,
 				419AFD3C282C31C100E2514C /* Credits.json */,
 				419AFD32282C310200E2514C /* Assets.xcassets */,
 				419AFD34282C310200E2514C /* Preview Content */,
@@ -145,6 +148,7 @@
 			files = (
 				419AFD31282C30F900E2514C /* ContentView.swift in Sources */,
 				419AFD2F282C30F900E2514C /* News_ReaderApp.swift in Sources */,
+				419AFD40282C3A0300E2514C /* ListStoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
