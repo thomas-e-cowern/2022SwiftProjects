@@ -9,7 +9,10 @@ import SwiftUI
 
 struct InfoView: View {
     var body: some View {
-        Text("Info View")
+        VStack {
+            Text("How to use Pity Party:")
+            Text("Info View")
+        }
     }
 }
 
