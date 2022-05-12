@@ -25,7 +25,7 @@ struct StoryDetailView: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.leading)
             
-            Text(article.description)
+            Text(article.content)
                 .padding()
                 .font(.body)
                 .fixedSize(horizontal: false, vertical: true)

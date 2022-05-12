@@ -12,6 +12,7 @@ struct Article: Codable {
     var urlToImage = ""
     var url = ""
     var description = ""
+    var content = ""
 //    var category = ""
 }
 
