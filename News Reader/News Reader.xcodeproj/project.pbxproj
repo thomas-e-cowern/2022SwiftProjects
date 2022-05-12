@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4176FCC6282D244C000FF96D /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176FCC5282D244C000FF96D /* ArticleModel.swift */; };
 		419AFD2F282C30F900E2514C /* News_ReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419AFD2E282C30F900E2514C /* News_ReaderApp.swift */; };
 		419AFD31282C30F900E2514C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419AFD30282C30F900E2514C /* ContentView.swift */; };
 		419AFD33282C310200E2514C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419AFD32282C310200E2514C /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4176FCC5282D244C000FF96D /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		419AFD2B282C30F900E2514C /* News Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		419AFD2E282C30F900E2514C /* News_ReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News_ReaderApp.swift; sourceTree = "<group>"; };
 		419AFD30282C30F900E2514C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				419AFD2E282C30F900E2514C /* News_ReaderApp.swift */,
 				419AFD30282C30F900E2514C /* ContentView.swift */,
 				419AFD44282C451F00E2514C /* HelperFile.swift */,
+				4176FCC5282D244C000FF96D /* ArticleModel.swift */,
 				419AFD3F282C3A0300E2514C /* ListStoryView.swift */,
 				419AFD3C282C31C100E2514C /* Credits.json */,
 				419AFD32282C310200E2514C /* Assets.xcassets */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				419AFD31282C30F900E2514C /* ContentView.swift in Sources */,
+				4176FCC6282D244C000FF96D /* ArticleModel.swift in Sources */,
 				419AFD2F282C30F900E2514C /* News_ReaderApp.swift in Sources */,
 				419AFD40282C3A0300E2514C /* ListStoryView.swift in Sources */,
 				419AFD45282C451F00E2514C /* HelperFile.swift in Sources */,
