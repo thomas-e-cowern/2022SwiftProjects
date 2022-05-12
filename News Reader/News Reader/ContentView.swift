@@ -16,23 +16,25 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            List {
-                ForEach(articles, id: \.title) { article in
-                    NavigationLink(destination: StoryDetailView(article: article)) {
-                        ListStoryView(article: article)
+            VStack (spacing: 10) {
+                List {
+                    ForEach(articles, id: \.title) { article in
+                        NavigationLink(destination: StoryDetailView(article: article)) {
+                            ListStoryView(article: article)
+                        }
                     }
+                }.task {
+                    await getArticles()
                 }
-            }.task {
-                await getArticles()
-            }
-            .navigationTitle("News Reader")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem (placement: .navigationBarTrailing) {
-                    Button {
-                        // Refresh
-                    } label: {
-                        Image(systemName: "arrow.clockwise")
+                .navigationTitle("News Reader")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem (placement: .navigationBarTrailing) {
+                        Button {
+                            // Refresh
+                        } label: {
+                            Image(systemName: "arrow.clockwise")
+                        }
                     }
                 }
             }

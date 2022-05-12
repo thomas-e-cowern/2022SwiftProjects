@@ -12,17 +12,36 @@ struct ListStoryView: View {
     @State var article: Article
     
     var body: some View {
-        VStack (alignment: .center) {
+        VStack (alignment: .center, spacing: 10) {
             Text(article.title)
                 .font(.body)
-                .fixedSize(horizontal: false, vertical: true)
+                .fixedSize(horizontal: false, vertical: false)
                 .multilineTextAlignment(.leading)
             
-            Image("newspaper")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 50, height: 50, alignment: .center)
-
+            if article.urlToImage != nil {
+                AsyncImage(url: URL(string: article.urlToImage!)) { phase in
+                    switch phase {
+                    case .empty:
+                        ProgressView()
+                    case .success(let image):
+                        image.resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(maxWidth: 300, maxHeight: 150)
+                    case .failure:
+                        Image("newspaper")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 300, maxHeight: 150)
+                    @unknown default:
+                        EmptyView()
+                    }
+                }
+            } else {
+                Image("newspaper")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: 300, maxHeight: 150)
+            }
         }
     }
 }
