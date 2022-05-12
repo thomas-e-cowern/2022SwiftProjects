@@ -12,8 +12,9 @@ struct StoryDetailView: View {
     @State var article: Article
     
     var body: some View {
-        VStack (alignment: .center) {
-            VStack {
+        VStack {
+            VStack (alignment: .center) {
+                
                 if article.urlToImage != nil {
                     AsyncImage(url: URL(string: article.urlToImage!)) { phase in
                         switch phase {
@@ -21,8 +22,8 @@ struct StoryDetailView: View {
                             ProgressView()
                         case .success(let image):
                             image.resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: 300, maxHeight: 150)
+                                .aspectRatio(contentMode: .fill)
+                                .frame(maxWidth: .infinity, maxHeight: 150)
                         case .failure:
                             Image("newspaper")
                         @unknown default:
@@ -35,25 +36,33 @@ struct StoryDetailView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(maxWidth: 400, maxHeight: 200)
                 }
-                
-                Text(article.title)
-                    .padding()
-                    .font(.headline)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .multilineTextAlignment(.leading)
-                
-                if article.description != nil {
-                    Text(article.description!)
-                        .padding()
-                        .font(.body)
-//                        .frame(maxWidth: 300)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .multilineTextAlignment(.leading)
-                }
-                
-                if article.url != nil {
-                    Link(destination: URL(string: article.url!)!) {
-                        Text("See the full story here...")
+            
+                Form {
+                    
+                    Section (header: Text("Headline:")) {
+                        Text(article.title)
+                            .padding()
+                            .font(.headline)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.leading)
+                    }
+                    
+                    Section (header: Text("Summary:")) {
+                        if article.description != nil {
+                            Text(article.description!)
+                                .padding()
+                                .font(.body)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .multilineTextAlignment(.leading)
+                        }
+                    }
+                    
+                    Section (header: Text("Story Link:")) {
+                        if article.url != nil {
+                            Link(destination: URL(string: article.url!)!) {
+                                Text("See the full story here...")
+                            }
+                        }
                     }
                 }
             }
