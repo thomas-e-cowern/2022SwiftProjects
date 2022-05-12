@@ -42,7 +42,7 @@ struct ContentView: View {
     
     func getArticles () async {
     
-        let articlesUrlString = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=91918a83b185469c9f81f5af74ae59f9"
+        let articlesUrlString = "https://newsapi.org/v2/top-headlines?country=us&apiKey=91918a83b185469c9f81f5af74ae59f9"
 //        print("😍😍😍 Inside get articles")
         
         guard let url = URL(string: articlesUrlString) else {
@@ -59,7 +59,7 @@ struct ContentView: View {
                 articles = decodedResponse.articles
                 print(articles[0].title)
             } else {
-                print("😡😡😡 Something went wrong decoding")
+                print("😡😡😡 Something went wrong decoding in content view")
             }
             //
         } catch {

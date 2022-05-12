@@ -12,7 +12,7 @@ class HelperFile: ObservableObject {
     
     @Published var articles : [Article] = []
     
-    let articlesUrlString = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=91918a83b185469c9f81f5af74ae59f9"
+    let articlesUrlString = "https://newsapi.org/v2/top-headlines?country=us&apiKey=91918a83b185469c9f81f5af74ae59f9"
     
     func getArticles () async {
     

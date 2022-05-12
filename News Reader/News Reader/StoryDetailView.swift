@@ -25,11 +25,13 @@ struct StoryDetailView: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.leading)
             
-            Text(article.content)
-                .padding()
-                .font(.body)
-                .fixedSize(horizontal: false, vertical: true)
-                .multilineTextAlignment(.leading)
+            if article.description != nil {
+                Text(article.description!)
+                    .padding()
+                    .font(.body)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.leading)
+            }
         }
     }
 }
