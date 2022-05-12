@@ -17,16 +17,16 @@ struct ContentView: View {
         
         NavigationView {
             List(articles, id:\.title) { article in
-                VStack {
-                    Text(article.title)
-                        .font(.headline)
-                }
-                
-//                ForEach(articles, id: \.self) { article in
-//                    NavigationLink(destination: ListStoryView(article: article)) {
-//                        ListStoryView(article: article)
-//                    }
+//                VStack {
+//                    Text(article.title)
+//                        .font(.headline)
 //                }
+                
+                ForEach(articles, id: \.title) { article in
+                    NavigationLink(destination: ListStoryView(article: article)) {
+                        ListStoryView(article: article)
+                    }
+                }
             }.task {
                 await getArticles()
             }

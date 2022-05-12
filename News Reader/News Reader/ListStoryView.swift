@@ -14,7 +14,9 @@ struct ListStoryView: View {
     var body: some View {
         VStack (alignment: .center) {
             Text(article.title)
-                .font(.title)
+                .font(.body)
+                .fixedSize(horizontal: false, vertical: true)
+                .multilineTextAlignment(.leading)
             
             Image("newspaper")
                 .resizable()
