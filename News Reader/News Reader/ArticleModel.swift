@@ -7,10 +7,14 @@
 
 import Foundation
 
-class Article: Decodable {
+struct Article: Decodable {
     var title = ""
     var urlToImage = ""
     var url = ""
     var description = ""
-    var category = ""
+//    var category = ""
+}
+
+struct Articles: Decodable {
+    var articles: [Article]
 }

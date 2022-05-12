@@ -28,11 +28,13 @@ struct ContentView: View {
                 ToolbarItem (placement: .navigationBarTrailing) {
                     Button {
                         // Refresh
-                        hp.getArticles()
                     } label: {
                         Image(systemName: "arrow.clockwise")
                     }
                 }
+            }
+            .task {
+                await hp.getArticles()
             }
         }
     }
