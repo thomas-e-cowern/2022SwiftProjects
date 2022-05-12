@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Article {
+class Article: Decodable {
     var title = ""
     var urlToImage = ""
     var url = ""
