@@ -50,6 +50,12 @@ struct StoryDetailView: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.leading)
                 }
+                
+                if article.url != nil {
+                    Link(destination: URL(string: article.url!)!) {
+                        Text("See the full story here...")
+                    }
+                }
             }
         }
     }
