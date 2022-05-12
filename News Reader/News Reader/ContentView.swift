@@ -16,14 +16,15 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            VStack (spacing: 10) {
+            VStack {
                 List {
                     ForEach(articles, id: \.title) { article in
                         NavigationLink(destination: StoryDetailView(article: article)) {
                             ListStoryView(article: article)
                         }
                     }
-                }.task {
+                }
+                .task {
                     await getArticles()
                 }
                 .navigationTitle("News Reader")
@@ -38,7 +39,6 @@ struct ContentView: View {
                     }
                 }
             }
-            
         }
     }
     
