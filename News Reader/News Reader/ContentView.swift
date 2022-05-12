@@ -65,7 +65,9 @@ struct ContentView: View {
         } catch {
             print("Invalid Data")
         }
-        
+    }
+    
+    func getImage (url: String) {
         
     }
 }

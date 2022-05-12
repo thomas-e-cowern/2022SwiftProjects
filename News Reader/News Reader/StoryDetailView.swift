@@ -14,10 +14,16 @@ struct StoryDetailView: View {
     var body: some View {
         VStack (alignment: .center) {
             
-            Image("newspaper")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 50, height: 50, alignment: .center)
+            if article.urlToImage != nil {
+                AsyncImage(url: URL(string: article.urlToImage!)) { image in
+                    image.resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: 300, maxHeight: 300)
+                    .background(Color.blue)
+                } placeholder: {
+                    ProgressView()
+                }
+            }
             
             Text(article.title)
                 .padding()
@@ -33,6 +39,10 @@ struct StoryDetailView: View {
                     .multilineTextAlignment(.leading)
             }
         }
+    }
+    
+    func getArticleImage (url: String) {
+        
     }
 }
 
