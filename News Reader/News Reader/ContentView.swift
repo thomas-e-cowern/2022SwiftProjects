@@ -16,14 +16,9 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            List(articles, id:\.title) { article in
-//                VStack {
-//                    Text(article.title)
-//                        .font(.headline)
-//                }
-                
+            List {
                 ForEach(articles, id: \.title) { article in
-                    NavigationLink(destination: ListStoryView(article: article)) {
+                    NavigationLink(destination: StoryDetailView(article: article)) {
                         ListStoryView(article: article)
                     }
                 }
