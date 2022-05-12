@@ -11,16 +11,24 @@ struct ContentView: View {
     
     let hp = HelperFile()
     
-    private var storyList: [String] = ["First Story", "Second Story", "Third Story", "Fourth Story", "Fifth Story", "Sixth Story"]
-    
+    @State private var articles = [Article]()
+
     var body: some View {
+        
         NavigationView {
-            List {
-                ForEach(storyList, id: \.self) { story in
-                    NavigationLink(destination: ListStoryView(title: story)) {
-                        ListStoryView(title: story)
-                    }
+            List(articles, id:\.title) { article in
+                VStack {
+                    Text(article.title)
+                        .font(.headline)
                 }
+                
+//                ForEach(articles, id: \.self) { article in
+//                    NavigationLink(destination: ListStoryView(article: article)) {
+//                        ListStoryView(article: article)
+//                    }
+//                }
+            }.task {
+                await getArticles()
             }
             .navigationTitle("News Reader")
             .navigationBarTitleDisplayMode(.inline)
@@ -33,10 +41,37 @@ struct ContentView: View {
                     }
                 }
             }
-            .task {
-                await hp.getArticles()
-            }
+            
         }
+    }
+    
+    func getArticles () async {
+    
+        let articlesUrlString = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=91918a83b185469c9f81f5af74ae59f9"
+//        print("😍😍😍 Inside get articles")
+        
+        guard let url = URL(string: articlesUrlString) else {
+            print("Invalid URL")
+            return
+        }
+        
+        do {
+//            print("😍😍😍 Inside do catch")
+            let (data, _) = try await URLSession.shared.data(from: url)
+//            print("😍😍😍 Data: \(data)")
+            debugPrint(data)
+            if let decodedResponse = try? JSONDecoder().decode(Articles.self, from: data) {
+                articles = decodedResponse.articles
+                print(articles[0].title)
+            } else {
+                print("😡😡😡 Something went wrong decoding")
+            }
+            //
+        } catch {
+            print("Invalid Data")
+        }
+        
+        
     }
 }
 

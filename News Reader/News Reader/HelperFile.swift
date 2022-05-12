@@ -10,11 +10,13 @@ import SwiftUI
 
 class HelperFile: ObservableObject {
     
+    var articles = [Article]()
+    
     let articlesUrlString = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=91918a83b185469c9f81f5af74ae59f9"
     
     func getArticles () async {
     
-        print("😍😍😍 Inside get articles")
+//        print("😍😍😍 Inside get articles")
         
         guard let url = URL(string: articlesUrlString) else {
             print("Invalid URL")
@@ -22,12 +24,13 @@ class HelperFile: ObservableObject {
         }
         
         do {
-            print("😍😍😍 Inside do catch")
+//            print("😍😍😍 Inside do catch")
             let (data, _) = try await URLSession.shared.data(from: url)
-            print("😍😍😍 Data: \(data)")
+//            print("😍😍😍 Data: \(data)")
             debugPrint(data)
             if let decodedResponse = try? JSONDecoder().decode(Articles.self, from: data) {
-                print(decodedResponse)
+                articles = decodedResponse.articles
+                print(articles[0].title)
             } else {
                 print("😡😡😡 Something went wrong decoding")
             }

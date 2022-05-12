@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ListStoryView: View {
     
-    @State var title: String
+    @State var article: Article
     
     var body: some View {
         VStack (alignment: .center) {
-            Text(title)
+            Text(article.title)
                 .font(.title)
             
             Image("newspaper")
@@ -22,11 +22,5 @@ struct ListStoryView: View {
                 .frame(width: 50, height: 50, alignment: .center)
 
         }
-    }
-}
-
-struct ListStoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListStoryView(title: "Preview Story")
     }
 }

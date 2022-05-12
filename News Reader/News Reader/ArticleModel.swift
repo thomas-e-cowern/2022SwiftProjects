@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Article: Decodable {
+struct Article: Codable {
     var title = ""
     var urlToImage = ""
     var url = ""
@@ -15,6 +15,6 @@ struct Article: Decodable {
 //    var category = ""
 }
 
-struct Articles: Decodable {
+struct Articles: Codable {
     var articles: [Article]
 }
