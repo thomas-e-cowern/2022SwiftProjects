@@ -48,6 +48,11 @@ struct ListStoryView: View {
                     .frame(maxWidth: 300, maxHeight: 150)
                     .padding(.bottom, 10)
             }
+            
+            HStack {
+                Text(article.publishedAt)
+                Text(article.source.name)
+            }
         }
         .padding(.bottom, 10)
     }

@@ -77,7 +77,7 @@ struct ContentView: View {
             debugPrint(data)
             if let decodedResponse = try? JSONDecoder().decode(Articles.self, from: data) {
                 articles = decodedResponse.articles
-                print(articles[0].title)
+                print(articles[5].source)
             } else {
                 print("😡😡😡 Something went wrong decoding in content view")
             }

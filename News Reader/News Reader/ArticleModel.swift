@@ -8,13 +8,12 @@
 import Foundation
 
 struct Article: Codable {
-//    var source: Source
+    var source: Source
     var title = ""
     var urlToImage: String? = ""
     var url: String? = ""
     var description: String? = ""
-//    var content = ""
-//    var category = ""
+    var publishedAt: String
 }
 
 struct Articles: Codable {
@@ -22,6 +21,6 @@ struct Articles: Codable {
 }
 
 struct Source: Codable {
-    var id = ""
+    var id: String? = ""
     var name = ""
 }
