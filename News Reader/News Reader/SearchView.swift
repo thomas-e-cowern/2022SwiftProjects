@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct SearchView: View {
+    
+    @State var text: String = ""
+    
     var body: some View {
-        Text("Search View")
+        HStack {
+            TextField("Search...", text: $text)
+                .padding(7)
+                .padding(.horizontal, 25)
+                .background(Color.gray.opacity(0.5))
+                .cornerRadius(6)
+                .padding(.horizontal, 10)
+            
+            Button {
+                print("Search string is \(text)")
+            } label: {
+                Image(systemName: "magnifyingglass")
+            }
+            .padding(.trailing, 10)
+        }
     }
 }
 
