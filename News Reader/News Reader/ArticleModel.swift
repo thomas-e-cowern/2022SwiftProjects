@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Article: Codable {
     var source: Source
@@ -17,15 +18,17 @@ struct Article: Codable {
     
     var publishedAtFormatted: String {
         let dateFormatter = ISO8601DateFormatter()
+        let options: ISO8601DateFormatter.Options = [.withYear, .withMonth, .withDay, .withDashSeparatorInDate, .withTime, .withColonSeparatorInTime, .withSpaceBetweenDateAndTime]
+        
         if let date = dateFormatter.date(from: publishedAt) {
-            print("Date as date : \(String(describing: date))")
-            let calendar = Calendar.current
-            let components = calendar.dateComponents([.year, .month, .day, .hour], from: date)
-            if let finalDate = calendar.date(from: components) {
-                return "\(finalDate)"
-            }
+     
+            let GMT = TimeZone(abbreviation: "EST")!
+            let stringTime = ISO8601DateFormatter.string(from: date, timeZone: GMT, formatOptions: options)
+            
+            return stringTime
+            
         }
-        return ""
+        return "No date information"
     }
 }
 
