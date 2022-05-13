@@ -12,6 +12,7 @@ struct ContentView: View {
     let hp = HelperFile()
     
     @State private var articles = [Article]()
+    @State private var showInfo: Bool = false
 
     var body: some View {
         
@@ -24,6 +25,9 @@ struct ContentView: View {
                         }
                     }
                 }
+                .sheet(isPresented: $showInfo, content: {
+                    InfoView()
+                })
                 .task {
                     await getArticles()
                 }
@@ -39,7 +43,7 @@ struct ContentView: View {
                     }
                     ToolbarItem (placement: .navigationBarTrailing) {
                         Button {
-                            // Refresh
+                            showInfo.toggle()
                         } label: {
                             Image(systemName: "info")
                         }
