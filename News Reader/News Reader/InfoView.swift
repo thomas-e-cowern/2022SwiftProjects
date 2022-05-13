@@ -9,19 +9,20 @@ import SwiftUI
 
 struct InfoView: View {
     var body: some View {
-        Group {
-            HStack {
-                Text("Designed by: ")
-                Text("Thomas E Cowern")
+        
+        NavigationView {
+            Form {
+                Section(header: Text("Designed by")) {
+                    Text("Thomas E. Cowern")
+                }
+                Section(header: Text("Newspaper Icons")) {
+                    Link("flaticon", destination: URL(string: "https://www.flaticon.com/free-icons/news")!)
+                }
+                Section(header: Text("Icons Generator")) {
+                    Link("appicon", destination: URL(string: "https://appicon.co")!)
+                }
             }
-            HStack {
-                Text("Icons Generator: ")
-                Text("https://appicon.co")
-            }
-            HStack {
-                Text("Newspapr icons")
-                Link("flaticon", destination: URL(string: "https://www.flaticon.com/free-icons/news")!)
-            }
+            .navigationBarTitle("Credits")
         }
     }
 }
