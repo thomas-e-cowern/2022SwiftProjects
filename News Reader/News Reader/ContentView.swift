@@ -30,11 +30,18 @@ struct ContentView: View {
                 .navigationTitle("News Reader")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem (placement: .navigationBarTrailing) {
+                    ToolbarItem (placement: .navigation) {
                         Button {
                             // Refresh
                         } label: {
                             Image(systemName: "arrow.clockwise")
+                        }
+                    }
+                    ToolbarItem (placement: .navigationBarTrailing) {
+                        Button {
+                            // Refresh
+                        } label: {
+                            Image(systemName: "info")
                         }
                     }
                 }
