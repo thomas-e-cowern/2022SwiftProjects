@@ -14,6 +14,19 @@ struct Article: Codable {
     var url: String? = ""
     var description: String? = ""
     var publishedAt: String
+    
+    var publishedAtFormatted: String {
+        let dateFormatter = ISO8601DateFormatter()
+        if let date = dateFormatter.date(from: publishedAt) {
+            print("Date as date : \(String(describing: date))")
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.year, .month, .day, .hour], from: date)
+            if let finalDate = calendar.date(from: components) {
+                return "\(finalDate)"
+            }
+        }
+        return ""
+    }
 }
 
 struct Articles: Codable {

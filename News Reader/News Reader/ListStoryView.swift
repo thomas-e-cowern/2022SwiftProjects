@@ -50,9 +50,13 @@ struct ListStoryView: View {
             }
             
             HStack {
-                Text(article.publishedAt)
+                Text(article.publishedAtFormatted)
+                
+                Spacer()
+                
                 Text(article.source.name)
             }
+            .font(.footnote)
         }
         .padding(.bottom, 10)
     }
