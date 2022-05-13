@@ -29,6 +29,7 @@ struct ListStoryView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(maxWidth: 300, maxHeight: 150)
                             .padding(.bottom, 10)
+                            .cornerRadius(10)
                     case .failure:
                         Image("newspaper")
                             .resizable()
