@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct InfoView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         
         NavigationView {
@@ -23,6 +26,12 @@ struct InfoView: View {
                 }
             }
             .navigationBarTitle("Credits")
+            .navigationBarItems( trailing: Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Done")
+                    .bold()
+            }))
         }
     }
 }

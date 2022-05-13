@@ -12,7 +12,7 @@ struct ContentView: View {
     let hp = HelperFile()
     
     @State private var articles = [Article]()
-    @State private var showInfo: Bool = false
+    @State var showInfo: Bool = false
 
     var body: some View {
         
