@@ -36,7 +36,7 @@ struct ContentView: View {
                 .toolbar {
                     ToolbarItem (placement: .navigation) {
                         Button {
-                            // Refresh
+                            refreshArticles()
                         } label: {
                             Image(systemName: "arrow.clockwise")
                         }
@@ -54,8 +54,14 @@ struct ContentView: View {
         .navigationViewStyle(StackNavigationViewStyle())
     }
     
-    func getArticles () async {
+    func refreshArticles () {
+        Task {
+            await getArticles()
+        }
+    }
     
+    func getArticles () async {
+        print("Getting Articles")
         let articlesUrlString = "https://newsapi.org/v2/top-headlines?country=us&apiKey=91918a83b185469c9f81f5af74ae59f9"
 //        print("😍😍😍 Inside get articles")
         
