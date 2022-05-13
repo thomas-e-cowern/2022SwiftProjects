@@ -12,7 +12,7 @@ struct ListStoryView: View {
     @State var article: Article
     
     var body: some View {
-        VStack (alignment: .center, spacing: 30) {
+        VStack (alignment: .leading, spacing: 30) {
             Text(article.title)
                 .font(.body)
                 .fixedSize(horizontal: false, vertical: false)
