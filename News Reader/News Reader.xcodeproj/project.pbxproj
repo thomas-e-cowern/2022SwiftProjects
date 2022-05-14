@@ -38,6 +38,7 @@
 		419AFD3E282C333D00E2514C /* News-Reader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "News-Reader-Info.plist"; sourceTree = SOURCE_ROOT; };
 		419AFD3F282C3A0300E2514C /* ListStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStoryView.swift; sourceTree = "<group>"; };
 		419AFD44282C451F00E2514C /* HelperFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFile.swift; sourceTree = "<group>"; };
+		41DF2297282FFB8C00EAFB1F /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		419AFD22282C30F800E2514C = {
 			isa = PBXGroup;
 			children = (
+				41DF2297282FFB8C00EAFB1F /* readme.md */,
 				419AFD2D282C30F900E2514C /* News Reader */,
 				419AFD2C282C30F900E2514C /* Products */,
 			);
