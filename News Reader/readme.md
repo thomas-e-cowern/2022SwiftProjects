@@ -17,7 +17,7 @@ Technologies:
 
 Data Source: 
 
-[![Datasource][newsapi-image][newsapi-url]]
+[![Datasource][newsapi-image]][newsapi-url]
 
 
 <!--[![License][license-image]][license-url]  -->
