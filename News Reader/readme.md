@@ -5,7 +5,7 @@
     <img src="News Reader/Assets.xcassets/newspaper.imageset/newspaper.png" alt="Logo" width="80" height="80">
   </a>
   <p align="center">
-    One to two paragraph statement about your product and what it does.
+    News Reader offers users top headlines, ability to search for headlines via subject, or the aplity to recieve headlines by news channel.
   </p>
 </p>
 
