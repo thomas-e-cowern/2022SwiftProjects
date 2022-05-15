@@ -28,6 +28,17 @@ Icons and Images:
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
+## Features
+
+- [x] Headline News 
+- [x] Search by subject
+- [x] Headline by news channel
+
+## Requirements
+
+- iOS 15
+- Xcode 13.0
+
 [https://github.com/thomas-e-cowern/](https://github.com/thomas-e-cowern/)
 
 [swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
