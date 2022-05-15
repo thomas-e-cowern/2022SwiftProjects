@@ -1,4 +1,4 @@
-# Draft Readme
+# Draft News Reader Readme
 <br />
 <p align="center">
   <a href="https://github.com/thomas-e-cowern/">
