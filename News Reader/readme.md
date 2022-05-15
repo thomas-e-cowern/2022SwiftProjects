@@ -3,7 +3,7 @@
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]  
-[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
+[![Platform](https://upload.wikimedia.org/wikipedia/commons/9/9f/IOS_15_logo_test.png)](https://www.apple.com/ios/ios-15/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 [https://github.com/thomas-e-cowern/](https://github.com/thomas-e-cowern/)
