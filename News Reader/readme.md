@@ -19,6 +19,9 @@ Data Source:
 
 [![Datasource][newsapi-image]][newsapi-url]
 
+Icons and Images:
+
+[![News icons][news-icon-image]][news-icon-url]
 
 <!--[![License][license-image]][license-url]  -->
 
@@ -36,3 +39,5 @@ Data Source:
 [codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com
 [newsapi-image]: https://img.shields.io/badge/newsfeed-newsapi.org-blue
 [newsapi-url]: https://newsapi.org
+[news-icon-url]: https://www.flaticon.com/free-icons/news
+[news-icon-image]: https://img.shields.io/badge/News--icons-Freepik%20--%20Flaticon-lightgrey
