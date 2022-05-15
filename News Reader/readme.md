@@ -5,10 +5,10 @@
     <img src="News Reader/Assets.xcassets/newspaper.imageset/newspaper.png" alt="Logo" width="80" height="80">
   </a>
   <p align="center">
-    News Reader offers users top headlines, ability to search for headlines via subject, or the aplity to recieve headlines by news channel.
+    News Reader offers users top headlines, ability to search for headlines via subject, or the ability to recieve headlines by news channel.
   </p>
 </p>
-
+<br />
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]  
