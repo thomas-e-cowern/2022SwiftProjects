@@ -22,6 +22,7 @@ Data Source:
 Icons and Images:
 
 [![News icons][news-icon-image]][news-icon-url]
+[![Icon Generator][icon-gen-image]][icon-gen-url]
 
 <!--[![License][license-image]][license-url]  -->
 
@@ -41,3 +42,5 @@ Icons and Images:
 [newsapi-url]: https://newsapi.org
 [news-icon-url]: https://www.flaticon.com/free-icons/news
 [news-icon-image]: https://img.shields.io/badge/News--icons-Freepik%20--%20Flaticon-lightgrey
+[icon-gen-image]: https://img.shields.io/badge/Icon%20generator-appicon.co-lightgrey
+[icon-gen-url]: https://appicon.co
