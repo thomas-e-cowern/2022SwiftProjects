@@ -10,10 +10,13 @@
 </p>
 <br />
 
+Technologies:
+
 [![Swift Version][swift-image]][swift-url]
-[![Build Status][travis-image]][travis-url]
-[![License][license-image]][license-url]  
 [![Platform](https://img.shields.io/badge/iOS-15-green)](https://www.apple.com/ios/ios-15/)
+
+[![License][license-image]][license-url]  
+
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 [https://github.com/thomas-e-cowern/](https://github.com/thomas-e-cowern/)
@@ -26,6 +29,3 @@
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad
 [codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com
-
-News Reader/Assets.xcassets/newspaper.imageset/newspaper.png
-
