@@ -16,6 +16,7 @@ Technologies:
 [![Platform](https://img.shields.io/badge/iOS-15-green)](https://www.apple.com/ios/ios-15/)
 
 Data Source: 
+
 [![Datasource][newsapi-image][newsapi-url]
 
 
