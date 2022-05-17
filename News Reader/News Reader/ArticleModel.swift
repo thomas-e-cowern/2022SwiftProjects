@@ -36,7 +36,7 @@ struct Articles: Codable {
     var articles: [Article]
 }
 
-struct Source: Codable {
-    var id: String? = ""
-    var name = ""
-}
+//struct Source: Codable {
+//    var id: String? = ""
+//    var name = ""
+//}
