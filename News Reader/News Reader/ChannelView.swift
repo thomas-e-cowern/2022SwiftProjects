@@ -10,7 +10,8 @@ import SwiftUI
 struct ChannelView: View {
     
     @StateObject private var networking = Networking()
-    @State var category = ""
+    @State private var sources = []
+    @State var chosenCategory = ""
     
     var body: some View {
         NavigationView {
@@ -28,6 +29,7 @@ struct ChannelView: View {
 //                                SourceSubview(category: $category)
                                 Button {
                                     print(category)
+                                    chosenCategory = category
                                 } label: {
                                     Text(category)
                                 }
@@ -42,10 +44,18 @@ struct ChannelView: View {
                     
                     List {
                         ForEach(networking.sources, id:\.self) { source in
-                            HStack {
-                                Spacer()
-                                ChannelCardView(source: source)
-                                Spacer()
+                            if chosenCategory == "" {
+                                HStack {
+                                    Spacer()
+                                    ChannelCardView(source: source)
+                                    Spacer()
+                                }
+                            } else if source.category == chosenCategory {
+                                HStack {
+                                    Spacer()
+                                    ChannelCardView(source: source)
+                                    Spacer()
+                                }
                             }
                         }
                     }
