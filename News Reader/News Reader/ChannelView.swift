@@ -10,6 +10,7 @@ import SwiftUI
 struct ChannelView: View {
     
     @StateObject private var networking = Networking()
+    @State var category = ""
     
     var body: some View {
         NavigationView {
@@ -24,7 +25,15 @@ struct ChannelView: View {
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(networking.categories, id:\.self) { category in
-                                SourceSubview(category: category)
+//                                SourceSubview(category: $category)
+                                Button {
+                                    print(category)
+                                } label: {
+                                    Text(category)
+                                }
+                                .padding()
+                                .frame(width: 150, height: 50)
+                                .background(Color.yellow)
                             }
                         }
                         .padding()

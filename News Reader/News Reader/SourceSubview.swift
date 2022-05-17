@@ -9,12 +9,12 @@ import SwiftUI
 
 struct SourceSubview: View {
     
-    @State var category: String
+    @Binding var category: String
     
     var body: some View {
         VStack {
             Button {
-                print("The category is: \(category)")
+                category = "\(category)"
             } label: {
                 Text(category)
             }
