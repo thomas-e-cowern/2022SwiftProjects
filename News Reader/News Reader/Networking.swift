@@ -23,8 +23,13 @@ class Networking: ObservableObject {
             let (data, _) = try await URLSession.shared.data(from: url)
             debugPrint(data)
             if let decodedResponse = try? JSONDecoder().decode(Sources.self, from: data) {
-                sources = decodedResponse.sources
-                print(sources[0].id as Any)
+                await MainActor.run {
+                    sources = decodedResponse.sources
+                    print(sources[0].id as Any)
+
+                }
+//                sources = decodedResponse.sources
+//                print(sources[0].id as Any)
             } else {
                 print("😡😡😡 Something went wrong decoding in get sources")
             }

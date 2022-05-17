@@ -12,10 +12,14 @@ struct ChannelView: View {
     @StateObject private var networking = Networking()
     
     var body: some View {
-        Text("Channel View")
-            .task {
-                await networking.getSources()
-            }
+        if networking.sources.count == 0 {
+            Text("Loading...")
+                .task {
+                    await networking.getSources()
+                }
+        } else {
+            Text(networking.sources[0].name)
+        }
     }
 }
 
