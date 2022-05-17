@@ -15,7 +15,6 @@ struct ChannelCardView: View {
         VStack (alignment: .center, spacing: 10) {
             Text(source.name)
                 .font(.headline)
-//            Text(source.description)
             Text("Category: \(source.category)")
         }
         .frame(width: 200, height: 50, alignment: .center)
