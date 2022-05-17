@@ -9,10 +9,21 @@ import SwiftUI
 
 struct SourceSubview: View {
     
-    @State private var category: String
+    @State var category: String
     
     var body: some View {
-        Text(category)
+        VStack {
+            Button {
+                print("The category is: \(category)")
+            } label: {
+                Text(category)
+            }
+        }
+        .padding()
+        .frame(width: 150, height: 50)
+        .background(Color.yellow)
+
+        
     }
 }
 

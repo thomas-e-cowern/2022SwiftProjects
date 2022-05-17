@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Networking: ObservableObject {
     
     let sourcesUrlString = "https://newsapi.org/v2/top-headlines/sources?country=us&apiKey=91918a83b185469c9f81f5af74ae59f9"
     
     @Published var sources : [Source] = []
+    @Published var categories : [String] = []
     
     func getSources () async {
         guard let url = URL(string: sourcesUrlString) else {
@@ -26,10 +28,16 @@ class Networking: ObservableObject {
                 await MainActor.run {
                     sources = decodedResponse.sources
                     print(sources[0].id as Any)
-
+                    for source in sources {
+                        let category = source.category
+//                        print("Category: \(category)")
+                        
+                        if !categories.contains(category) {
+                            categories.append(source.category)
+                        }
+                        print("Categories: \(categories)")
+                    }
                 }
-//                sources = decodedResponse.sources
-//                print(sources[0].id as Any)
             } else {
                 print("😡😡😡 Something went wrong decoding in get sources")
             }

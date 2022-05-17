@@ -21,6 +21,16 @@ struct ChannelView: View {
                             await networking.getSources()
                         }
                 } else {
+                    ScrollView (.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(networking.categories, id:\.self) { category in
+                                SourceSubview(category: category)
+                            }
+                        }
+                        .padding()
+                    }
+                    
+                    
                     List {
                         ForEach(networking.sources, id:\.self) { source in
                             HStack {
