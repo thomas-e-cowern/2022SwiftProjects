@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Article: Codable {
-    var source: Source
+//    var source: Source?
     var title = ""
     var urlToImage: String? = ""
     var url: String? = ""

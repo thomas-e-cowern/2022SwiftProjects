@@ -54,7 +54,7 @@ struct ListStoryView: View {
                 
                 Spacer()
                 
-                Text(article.source.name)
+//                Text(article.source?.name ?? "")
             }
             .font(.footnote)
         }

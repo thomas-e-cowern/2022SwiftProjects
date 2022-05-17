@@ -18,7 +18,7 @@ class HelperFile: ObservableObject {
     
     func getArticles () async {
     
-//        print("😍😍😍 Inside get articles")
+        print("😍😍😍 Inside get articles")
         
         guard let url = URL(string: articlesUrlString) else {
             print("Invalid URL")
@@ -52,7 +52,7 @@ class HelperFile: ObservableObject {
             debugPrint(data)
             if let decodedResponse = try? JSONDecoder().decode(Sources.self, from: data) {
                 sources = decodedResponse.sources
-                print(sources[0].id)
+                print(sources[0].id as Any)
             } else {
                 print("😡😡😡 Something went wrong decoding in get sources")
             }

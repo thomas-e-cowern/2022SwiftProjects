@@ -21,6 +21,7 @@
 		419AFD40282C3A0300E2514C /* ListStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419AFD3F282C3A0300E2514C /* ListStoryView.swift */; };
 		419AFD45282C451F00E2514C /* HelperFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419AFD44282C451F00E2514C /* HelperFile.swift */; };
 		41E5F9482833E02F0027DEB3 /* SourcesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E5F9472833E02F0027DEB3 /* SourcesModel.swift */; };
+		41E5F94A2833ED260027DEB3 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E5F9492833ED250027DEB3 /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		419AFD44282C451F00E2514C /* HelperFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFile.swift; sourceTree = "<group>"; };
 		41DF2297282FFB8C00EAFB1F /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		41E5F9472833E02F0027DEB3 /* SourcesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesModel.swift; sourceTree = "<group>"; };
+		41E5F9492833ED250027DEB3 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				41E5F9472833E02F0027DEB3 /* SourcesModel.swift */,
 				419AFD3F282C3A0300E2514C /* ListStoryView.swift */,
 				4119091A282EDDF900B437CD /* HeadlinesView.swift */,
+				41E5F9492833ED250027DEB3 /* Networking.swift */,
 				419AFD3C282C31C100E2514C /* Credits.json */,
 				419AFD32282C310200E2514C /* Assets.xcassets */,
 				419AFD34282C310200E2514C /* Preview Content */,
@@ -179,6 +182,7 @@
 				419AFD31282C30F900E2514C /* ContentView.swift in Sources */,
 				4119091D282EDE7200B437CD /* SearchView.swift in Sources */,
 				4176FCC6282D244C000FF96D /* ArticleModel.swift in Sources */,
+				41E5F94A2833ED260027DEB3 /* Networking.swift in Sources */,
 				419AFD2F282C30F900E2514C /* News_ReaderApp.swift in Sources */,
 				4176FCC8282D56DD000FF96D /* StoryDetailView.swift in Sources */,
 				419AFD40282C3A0300E2514C /* ListStoryView.swift in Sources */,

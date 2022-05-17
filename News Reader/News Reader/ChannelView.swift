@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ChannelView: View {
+    
+    @StateObject private var networking = Networking()
+    
     var body: some View {
         Text("Channel View")
+            .task {
+                await networking.getSources()
+            }
     }
 }
 
