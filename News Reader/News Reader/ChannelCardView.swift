@@ -12,13 +12,16 @@ struct ChannelCardView: View {
     let source: Source
     
     var body: some View {
-        VStack (spacing: 10) {
+        VStack (alignment: .center, spacing: 10) {
             Text(source.name)
                 .font(.headline)
-            Text(source.description)
+//            Text(source.description)
             Text("Category: \(source.category)")
         }
+        .frame(width: 200, height: 50, alignment: .center)
         .padding()
+        .background(Color.blue)
+        .cornerRadius(10)
     }
 }
 

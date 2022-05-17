@@ -12,7 +12,7 @@ struct ChannelView: View {
     @StateObject private var networking = Networking()
     
     var body: some View {
-        VStack (spacing: 10) {
+        VStack (alignment: .center, spacing: 10) {
             if networking.sources.count == 0 {
                 Text("Loading...")
                     .task {
@@ -21,7 +21,11 @@ struct ChannelView: View {
             } else {
                 List {
                     ForEach(networking.sources, id:\.self) { source in
-                        ChannelCardView(source: source)
+                        HStack {
+                            Spacer()
+                            ChannelCardView(source: source)
+                            Spacer()
+                        }
                     }
                 }
             }
