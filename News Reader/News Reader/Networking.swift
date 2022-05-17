@@ -9,7 +9,7 @@ import Foundation
 
 class Networking: ObservableObject {
     
-    let sourcesUrlString = "https://newsapi.org/v2/top-headlines/sources?apiKey=91918a83b185469c9f81f5af74ae59f9"
+    let sourcesUrlString = "https://newsapi.org/v2/top-headlines/sources?country=us&apiKey=91918a83b185469c9f81f5af74ae59f9"
     
     @Published var sources : [Source] = []
     
