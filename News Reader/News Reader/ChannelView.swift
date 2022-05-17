@@ -13,6 +13,7 @@ struct ChannelView: View {
     
     var body: some View {
         NavigationView {
+            
             VStack (alignment: .center, spacing: 10) {
                 if networking.sources.count == 0 {
                     Text("Loading...")
