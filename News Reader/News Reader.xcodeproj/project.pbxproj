@@ -22,6 +22,7 @@
 		419AFD45282C451F00E2514C /* HelperFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419AFD44282C451F00E2514C /* HelperFile.swift */; };
 		41E5F9482833E02F0027DEB3 /* SourcesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E5F9472833E02F0027DEB3 /* SourcesModel.swift */; };
 		41E5F94A2833ED260027DEB3 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E5F9492833ED250027DEB3 /* Networking.swift */; };
+		41E5F94C2833F11E0027DEB3 /* ChannelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E5F94B2833F11E0027DEB3 /* ChannelCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		41DF2297282FFB8C00EAFB1F /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		41E5F9472833E02F0027DEB3 /* SourcesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesModel.swift; sourceTree = "<group>"; };
 		41E5F9492833ED250027DEB3 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		41E5F94B2833F11E0027DEB3 /* ChannelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				419AFD2E282C30F900E2514C /* News_ReaderApp.swift */,
 				419AFD30282C30F900E2514C /* ContentView.swift */,
 				4119091E282EDE9800B437CD /* ChannelView.swift */,
+				41E5F94B2833F11E0027DEB3 /* ChannelCardView.swift */,
 				4119091C282EDE7200B437CD /* SearchView.swift */,
 				41190918282E7B5B00B437CD /* InfoView.swift */,
 				4176FCC7282D56DC000FF96D /* StoryDetailView.swift */,
@@ -186,6 +189,7 @@
 				419AFD2F282C30F900E2514C /* News_ReaderApp.swift in Sources */,
 				4176FCC8282D56DD000FF96D /* StoryDetailView.swift in Sources */,
 				419AFD40282C3A0300E2514C /* ListStoryView.swift in Sources */,
+				41E5F94C2833F11E0027DEB3 /* ChannelCardView.swift in Sources */,
 				419AFD45282C451F00E2514C /* HelperFile.swift in Sources */,
 				4119091B282EDDF900B437CD /* HeadlinesView.swift in Sources */,
 				41E5F9482833E02F0027DEB3 /* SourcesModel.swift in Sources */,
