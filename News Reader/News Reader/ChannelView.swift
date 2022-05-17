@@ -12,13 +12,19 @@ struct ChannelView: View {
     @StateObject private var networking = Networking()
     
     var body: some View {
-        if networking.sources.count == 0 {
-            Text("Loading...")
-                .task {
-                    await networking.getSources()
+        VStack (spacing: 10) {
+            if networking.sources.count == 0 {
+                Text("Loading...")
+                    .task {
+                        await networking.getSources()
+                    }
+            } else {
+                List {
+                    ForEach(networking.sources, id:\.self) { source in
+                        ChannelCardView(source: source)
+                    }
                 }
-        } else {
-            Text(networking.sources[0].name)
+            }
         }
     }
 }

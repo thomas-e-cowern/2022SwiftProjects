@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Source: Codable {
+struct Source: Codable, Hashable {
     var id: String? = ""
     var name = ""
     var description = ""

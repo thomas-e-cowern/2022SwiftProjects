@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct ChannelCardView: View {
+    
+    let source: Source
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (spacing: 10) {
+            Text(source.name)
+                .font(.headline)
+            Text(source.description)
+            Text("Category: \(source.category)")
+        }
+        .padding()
     }
 }
 
 struct ChannelCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ChannelCardView()
+        ChannelCardView(source: Source(id: "Test", name: "Test", description: "Test", url: "Test", category: "Test", country: "Test"))
     }
 }
