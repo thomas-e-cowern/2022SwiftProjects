@@ -32,7 +32,6 @@ class Networking: ObservableObject {
                     sources = decodedResponse.sources
                     for source in sources {
                         let category = source.category
-                        
                         if !categories.contains(category) {
                             categories.append(source.category)
                         }

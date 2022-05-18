@@ -12,12 +12,10 @@ struct SearchView: View {
     @StateObject private var networking = Networking()
     @State var text: String = ""
     @State var showInfo: Bool = false
-    @FocusState var buttonIsTapped: Bool
     
     var body: some View {
-        VStack {
-            NavigationView {
-
+        NavigationView {
+            VStack {
                 List {
                     ForEach(networking.channelArticles, id: \.title) { article in
                         NavigationLink(destination: StoryDetailView(article: article)) {
@@ -26,18 +24,19 @@ struct SearchView: View {
                     }
                     
                 }
+                .navigationBarTitle("", displayMode: .inline)
                 .toolbar {
                     ToolbarItemGroup (placement: .primaryAction) {
                         HStack {
                             TextField("Search...", text: $text)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .frame(minWidth: 300)
-                                .focused($buttonIsTapped)
-                            
+                                .onSubmit {
+                                    search()
+                                }
                             Button {
                                 print("Search string is \(text)")
                                 search()
-                                buttonIsTapped = false
                                 
                             } label: {
                                 Image(systemName: "magnifyingglass")
@@ -49,9 +48,9 @@ struct SearchView: View {
                 .sheet(isPresented: $showInfo, content: {
                     InfoView()
                 })
-            }
+            } // End of VStack
+            .navigationViewStyle(StackNavigationViewStyle())
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     func search () {
