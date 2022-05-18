@@ -44,26 +44,29 @@ struct ChannelView: View {
                     
                     List {
                         ForEach(networking.sources, id:\.self) { source in
-                            if chosenCategory == "" {
-                                HStack {
-                                    Spacer()
-                                    ChannelCardView(source: source)
-                                    Spacer()
-                                }
-                            } else if source.category == chosenCategory {
-                                HStack {
-                                    Spacer()
-                                    ChannelCardView(source: source)
-                                    Spacer()
-                                }
-                            } else if chosenCategory == "All" {
-                                HStack {
-                                    Spacer()
-                                    ChannelCardView(source: source)
-                                    Spacer()
+                            NavigationLink(destination: ChannelArticleView(channel: source.name)) {
+                                if chosenCategory == "" {
+                                    HStack {
+                                        Spacer()
+                                        ChannelCardView(source: source)
+                                        Spacer()
+                                    }
+                                } else if source.category == chosenCategory {
+                                    HStack {
+                                        Spacer()
+                                        ChannelCardView(source: source)
+                                        Spacer()
+                                    }
+                                } else if chosenCategory == "All" {
+                                    HStack {
+                                        Spacer()
+                                        ChannelCardView(source: source)
+                                        Spacer()
+                                    }
                                 }
                             }
-                        }
+    
+                        } // End of for each
                     }
                 }
             } // End of VStack
