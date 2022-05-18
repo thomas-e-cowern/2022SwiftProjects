@@ -75,8 +75,27 @@ class Networking: ObservableObject {
     func getArticlesForSearch (searchTerm: String) async {
         
         let searchTerm = searchTerm.lowercased()
-        let searchUrlString = "https://newsapi.org/v2/everything?q=\(searchTerm)&from=2022-05-18&sortBy=popularity&apiKey=91918a83b185469c9f81f5af74ae59f9"
+        let searchUrlString = "https://newsapi.org/v2/everything?qInTitle=\(searchTerm)&apiKey=91918a83b185469c9f81f5af74ae59f9"
         
         print("Search: \(searchUrlString)")
-    }
+        
+        guard let url = URL(string: searchUrlString) else {
+            print("Invalid url in get articles for search")
+            return
+        }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            if let decodedResponse = try? JSONDecoder().decode(Articles.self, from: data) {
+                await MainActor.run {
+                    channelArticles = decodedResponse.articles
+                    print("Search articles: \(channelArticles)")
+                }
+            } else {
+                print("😡😡😡 Something went wrong decoding in get articles for search")
+            }
+        } catch {
+            print("Invalid data in get articles for search")
+        }
+    } // End of get articles for search
 }
