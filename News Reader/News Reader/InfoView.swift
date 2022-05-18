@@ -24,6 +24,9 @@ struct InfoView: View {
                 Section(header: Text("Icons Generator")) {
                     Link("appicon", destination: URL(string: "https://appicon.co")!)
                 }
+                Section(header: Text("News API")) {
+                    Link("newsapi.org", destination: URL(string: "https://newsapi.org")!)
+                }
             }
             .navigationBarTitle("Credits")
             .navigationBarItems( trailing: Button(action: {
