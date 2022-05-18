@@ -9,12 +9,24 @@ import SwiftUI
 
 struct ChannelArticleView: View {
     
+    @StateObject private var networking = Networking()
+    @State private var articles = [Article]()
+    @State var showInfo: Bool = false
     var channel: String = ""
     
     var body: some View {
-        Text(channel)
+        List {
+            ForEach(networking.channelArticles, id: \.title) { article in
+                NavigationLink(destination: StoryDetailView(article: article)) {
+                    ListStoryView(article: article)
+                }
+            }
+        }
+        .sheet(isPresented: $showInfo, content: {
+            InfoView()
+        })
             .task {
-                await Networking().getArticlesBySource(source: channel)
+                await networking.getArticlesBySource(source: channel)
             }
     }
 }
