@@ -11,37 +11,47 @@ struct SearchView: View {
     
     @StateObject private var networking = Networking()
     @State var text: String = ""
+    @State var showInfo: Bool = false
     @FocusState var buttonIsTapped: Bool
     
     var body: some View {
         VStack {
-            HStack {
-                TextField("Search...", text: $text)
-                    .padding(7)
-                    .padding(.horizontal, 25)
-                    .background(Color.gray.opacity(0.5))
-                    .cornerRadius(6)
-                    .padding(.horizontal, 10)
-                    .focused($buttonIsTapped)
-                
-                Button {
-                    print("Search string is \(text)")
-                    search()
-                    buttonIsTapped = false
+            NavigationView {
+
+                List {
+                    ForEach(networking.channelArticles, id: \.title) { article in
+                        NavigationLink(destination: StoryDetailView(article: article)) {
+                            ListStoryView(article: article)
+                        }
+                    }
                     
-                } label: {
-                    Image(systemName: "magnifyingglass")
                 }
-                .padding(.trailing, 10)
-            }
-            List {
-                ForEach(networking.channelArticles, id: \.title) { article in
-                    NavigationLink(destination: StoryDetailView(article: article)) {
-                        ListStoryView(article: article)
+                .toolbar {
+                    ToolbarItemGroup (placement: .primaryAction) {
+                        HStack {
+                            TextField("Search...", text: $text)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .frame(minWidth: 300)
+                                .focused($buttonIsTapped)
+                            
+                            Button {
+                                print("Search string is \(text)")
+                                search()
+                                buttonIsTapped = false
+                                
+                            } label: {
+                                Image(systemName: "magnifyingglass")
+                            }
+                            .padding(.trailing, 10)
+                        }
                     }
                 }
+                .sheet(isPresented: $showInfo, content: {
+                    InfoView()
+                })
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     func search () {
