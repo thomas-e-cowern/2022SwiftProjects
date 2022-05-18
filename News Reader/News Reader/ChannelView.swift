@@ -26,7 +26,6 @@ struct ChannelView: View {
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(networking.categories, id:\.self) { category in
-//                                SourceSubview(category: $category)
                                 Button {
                                     print(category)
                                     chosenCategory = category
@@ -41,10 +40,8 @@ struct ChannelView: View {
                         .padding()
                     }
                     
-                    
                     List {
                         ForEach(networking.sources, id:\.self) { source in
-//                            NavigationLink(destination: ChannelArticleView(channel: source.id ?? "No Source ID")) {
                                 if chosenCategory == "" {
                                     NavigationLink(destination: ChannelArticleView(channel: source.id ?? "No Source ID")) {
                                         HStack {
@@ -70,8 +67,6 @@ struct ChannelView: View {
                                         }
                                     }
                                 }
-//                            }
-    
                         } // End of for each
                     }
                 }

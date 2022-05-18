@@ -17,6 +17,7 @@ class Networking: ObservableObject {
     
     @Published var sources : [Source] = []
     @Published var categories : [String] = ["All"]
+    @Published var channelArticles = [Article]()
     
     // MARK:  Get Sources
     func getSources () async {
@@ -51,12 +52,29 @@ class Networking: ObservableObject {
     } // End of get sources
     
     // MARK:  Get Articles By Source
-    func getArticlesBySource (source: String) {
+    func getArticlesBySource (source: String) async {
         
         let source = source.filter { !$0.isWhitespace }.lowercased()
         let sourceUrlString = "https://newsapi.org/v2/top-headlines?sources=\(source)&apiKey=91918a83b185469c9f81f5af74ae59f9"
         
         print("Source URL: \(sourceUrlString)")
         
+        guard let url = URL(string: sourceUrlString) else {
+            print("Invalid url in get article by source")
+            return
+        }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            debugPrint(data)
+            if let decodedResponse = try? JSONDecoder().decode(Articles.self, from: data) {
+                channelArticles = decodedResponse.articles
+                print(channelArticles[0].title as Any)
+            } else {
+                print("😡😡😡 Something went wrong decoding in get articles by source")
+            }
+        } catch {
+            print("Invalid data in get articles by source")
+        }
     } // End of get articles by source
 }

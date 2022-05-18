@@ -13,8 +13,8 @@ struct ChannelArticleView: View {
     
     var body: some View {
         Text(channel)
-            .onAppear {
-                Networking().getArticlesBySource(source: channel)
+            .task {
+                await Networking().getArticlesBySource(source: channel)
             }
     }
 }
