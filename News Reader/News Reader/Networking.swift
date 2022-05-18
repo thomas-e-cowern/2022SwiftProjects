@@ -71,11 +71,12 @@ class Networking: ObservableObject {
         }
     } // End of get articles by source
     
+    // MARK:  Get articles for search
     func getArticlesForSearch (searchTerm: String) async {
         
         let searchTerm = searchTerm.lowercased()
-        let searchUrlString = ""
+        let searchUrlString = "https://newsapi.org/v2/everything?q=\(searchTerm)&from=2022-05-18&sortBy=popularity&apiKey=91918a83b185469c9f81f5af74ae59f9"
         
-        print("Search: \(searchTerm)")
+        print("Search: \(searchUrlString)")
     }
 }
