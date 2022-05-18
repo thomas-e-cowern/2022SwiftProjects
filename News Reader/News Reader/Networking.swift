@@ -14,7 +14,6 @@ class Networking: ObservableObject {
     
     let sourcesUrlString = "https://newsapi.org/v2/top-headlines/sources?country=us&apiKey=91918a83b185469c9f81f5af74ae59f9"
     
-    
     @Published var sources : [Source] = []
     @Published var categories : [String] = ["All"]
     @Published var channelArticles = [Article]()
@@ -28,19 +27,15 @@ class Networking: ObservableObject {
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            debugPrint(data)
             if let decodedResponse = try? JSONDecoder().decode(Sources.self, from: data) {
                 await MainActor.run {
                     sources = decodedResponse.sources
-                    print(sources[0].id as Any)
                     for source in sources {
                         let category = source.category
-//                        print("Category: \(category)")
                         
                         if !categories.contains(category) {
                             categories.append(source.category)
                         }
-                        print("Categories: \(categories)")
                     }
                 }
             } else {
@@ -57,8 +52,6 @@ class Networking: ObservableObject {
         let source = source.filter { !$0.isWhitespace }.lowercased()
         let sourceUrlString = "https://newsapi.org/v2/top-headlines?sources=\(source)&apiKey=91918a83b185469c9f81f5af74ae59f9"
         
-        print("Source URL: \(sourceUrlString)")
-        
         guard let url = URL(string: sourceUrlString) else {
             print("Invalid url in get article by source")
             return
@@ -66,10 +59,10 @@ class Networking: ObservableObject {
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            debugPrint(data)
             if let decodedResponse = try? JSONDecoder().decode(Articles.self, from: data) {
-                channelArticles = decodedResponse.articles
-                print(channelArticles[0].title as Any)
+                await MainActor.run {
+                    channelArticles = decodedResponse.articles
+                }
             } else {
                 print("😡😡😡 Something went wrong decoding in get articles by source")
             }
