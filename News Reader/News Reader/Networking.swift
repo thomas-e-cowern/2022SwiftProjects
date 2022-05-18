@@ -70,4 +70,12 @@ class Networking: ObservableObject {
             print("Invalid data in get articles by source")
         }
     } // End of get articles by source
+    
+    func getArticlesForSearch (searchTerm: String) async {
+        
+        let searchTerm = searchTerm.lowercased()
+        let searchUrlString = ""
+        
+        print("Search: \(searchTerm)")
+    }
 }
