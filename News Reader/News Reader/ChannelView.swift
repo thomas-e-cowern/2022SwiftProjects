@@ -56,6 +56,12 @@ struct ChannelView: View {
                                     ChannelCardView(source: source)
                                     Spacer()
                                 }
+                            } else if chosenCategory == "All" {
+                                HStack {
+                                    Spacer()
+                                    ChannelCardView(source: source)
+                                    Spacer()
+                                }
                             }
                         }
                     }
