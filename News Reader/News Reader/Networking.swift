@@ -14,9 +14,11 @@ class Networking: ObservableObject {
     
     let sourcesUrlString = "https://newsapi.org/v2/top-headlines/sources?country=us&apiKey=91918a83b185469c9f81f5af74ae59f9"
     
+    
     @Published var sources : [Source] = []
     @Published var categories : [String] = ["All"]
     
+    // MARK:  Get Sources
     func getSources () async {
         guard let url = URL(string: sourcesUrlString) else {
             print("Invalid url in get sources")
@@ -46,6 +48,15 @@ class Networking: ObservableObject {
         } catch {
             print("Invalid data in get sources")
         }
+    } // End of get sources
+    
+    // MARK:  Get Articles By Source
+    func getArticlesBySource (source: String) {
         
-    }
+        let source = source.filter { !$0.isWhitespace }.lowercased()
+        let sourceUrlString = "https://newsapi.org/v2/top-headlines?sources=\(source)&apiKey=91918a83b185469c9f81f5af74ae59f9"
+        
+        print("Source URL: \(sourceUrlString)")
+        
+    } // End of get articles by source
 }

@@ -44,7 +44,7 @@ struct ChannelView: View {
                     
                     List {
                         ForEach(networking.sources, id:\.self) { source in
-                            NavigationLink(destination: ChannelArticleView(channel: source.name)) {
+                            NavigationLink(destination: ChannelArticleView(channel: source.id ?? "No Source ID")) {
                                 if chosenCategory == "" {
                                     HStack {
                                         Spacer()
