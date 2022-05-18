@@ -15,20 +15,35 @@ struct ChannelArticleView: View {
     var channel: String = ""
     
     var body: some View {
-        List {
-            ForEach(networking.channelArticles, id: \.title) { article in
-                NavigationLink(destination: StoryDetailView(article: article)) {
-                    ListStoryView(article: article)
+            List {
+                ForEach(networking.channelArticles, id: \.title) { article in
+                    NavigationLink(destination: StoryDetailView(article: article)) {
+                        ListStoryView(article: article)
+                    }
                 }
             }
-        }
-        .navigationTitle(channel)
-        .sheet(isPresented: $showInfo, content: {
-            InfoView()
-        })
-            .task {
-                await networking.getArticlesBySource(source: channel)
+            .navigationTitle(channelTitle(channel: channel))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem (placement: .navigationBarTrailing) {
+                    Button {
+                        showInfo.toggle()
+                    } label: {
+                        Image(systemName: "info")
+                    }
+                }
             }
+            .sheet(isPresented: $showInfo, content: {
+                InfoView()
+            })
+                .task {
+                    await networking.getArticlesBySource(source: channel)
+                }
+    }
+    
+    func channelTitle (channel: String) -> String {
+        let channel = channel.replacingOccurrences(of: "-", with: " ").localizedUppercase
+        return channel
     }
 }
 
