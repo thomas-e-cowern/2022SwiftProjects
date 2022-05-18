@@ -22,6 +22,7 @@ struct ChannelArticleView: View {
                 }
             }
         }
+        .navigationTitle(channel)
         .sheet(isPresented: $showInfo, content: {
             InfoView()
         })
