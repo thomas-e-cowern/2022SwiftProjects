@@ -44,27 +44,33 @@ struct ChannelView: View {
                     
                     List {
                         ForEach(networking.sources, id:\.self) { source in
-                            NavigationLink(destination: ChannelArticleView(channel: source.id ?? "No Source ID")) {
+//                            NavigationLink(destination: ChannelArticleView(channel: source.id ?? "No Source ID")) {
                                 if chosenCategory == "" {
-                                    HStack {
-                                        Spacer()
-                                        ChannelCardView(source: source)
-                                        Spacer()
+                                    NavigationLink(destination: ChannelArticleView(channel: source.id ?? "No Source ID")) {
+                                        HStack {
+                                            Spacer()
+                                            ChannelCardView(source: source)
+                                            Spacer()
+                                        }
                                     }
                                 } else if source.category == chosenCategory {
-                                    HStack {
-                                        Spacer()
-                                        ChannelCardView(source: source)
-                                        Spacer()
+                                    NavigationLink(destination: ChannelArticleView(channel: source.id ?? "No Source ID")) {
+                                        HStack {
+                                            Spacer()
+                                            ChannelCardView(source: source)
+                                            Spacer()
+                                        }
                                     }
                                 } else if chosenCategory == "All" {
-                                    HStack {
-                                        Spacer()
-                                        ChannelCardView(source: source)
-                                        Spacer()
+                                    NavigationLink(destination: ChannelArticleView(channel: source.id ?? "No Source ID")) {
+                                        HStack {
+                                            Spacer()
+                                            ChannelCardView(source: source)
+                                            Spacer()
+                                        }
                                     }
                                 }
-                            }
+//                            }
     
                         } // End of for each
                     }
