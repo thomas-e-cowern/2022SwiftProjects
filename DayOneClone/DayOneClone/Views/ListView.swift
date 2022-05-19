@@ -11,12 +11,17 @@ struct ListView: View {
     var body: some View {
         VStack {
             HeaderView()
-            List {
-                ForEach(0..<20, id: \.self) { number in
-                    Text("Entry \(number)")
+            NavigationView {
+                List {
+                    ForEach(0..<20, id: \.self) { number in
+                        NavigationLink(destination: EntryView()) {
+                            Text("Entry \(number)")
+                        }
+                    }
                 }
+                .background(Color.red)
+                .navigationBarHidden(true)
             }
-            .background(Color.red)
         }
     }
 }
