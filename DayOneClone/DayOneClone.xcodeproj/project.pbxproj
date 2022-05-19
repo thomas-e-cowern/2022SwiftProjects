@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		415B368F2836765000D3C5B9 /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B368E2836764F00D3C5B9 /* NewEntryView.swift */; };
+		415B3691283676FA00D3C5B9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B3690283676FA00D3C5B9 /* HeaderView.swift */; };
 		41B4B8D32836621E00417C6B /* DayOneCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4B8D22836621E00417C6B /* DayOneCloneApp.swift */; };
 		41B4B8D52836621E00417C6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4B8D42836621E00417C6B /* ContentView.swift */; };
 		41B4B8D72836624300417C6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41B4B8D62836624300417C6B /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		415B368E2836764F00D3C5B9 /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
+		415B3690283676FA00D3C5B9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		41B4B8CF2836621E00417C6B /* DayOneClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayOneClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B4B8D22836621E00417C6B /* DayOneCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOneCloneApp.swift; sourceTree = "<group>"; };
 		41B4B8D42836621E00417C6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				41B4B8D42836621E00417C6B /* ContentView.swift */,
 				415B368E2836764F00D3C5B9 /* NewEntryView.swift */,
 				41B4B8E02836665B00417C6B /* ListView.swift */,
+				415B3690283676FA00D3C5B9 /* HeaderView.swift */,
 				41B4B8E22836691B00417C6B /* PhotoView.swift */,
 				41B4B8D62836624300417C6B /* Assets.xcassets */,
 				41B4B8D82836624300417C6B /* Preview Content */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41B4B8D52836621E00417C6B /* ContentView.swift in Sources */,
+				415B3691283676FA00D3C5B9 /* HeaderView.swift in Sources */,
 				41B4B8D32836621E00417C6B /* DayOneCloneApp.swift in Sources */,
 				41B4B8E12836665C00417C6B /* ListView.swift in Sources */,
 				41B4B8E32836691B00417C6B /* PhotoView.swift in Sources */,
