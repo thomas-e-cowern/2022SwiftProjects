@@ -11,7 +11,7 @@ struct ListView: View {
     var body: some View {
         VStack {
             HeaderView()
-            Text("List View")
+            
         }
     }
 }

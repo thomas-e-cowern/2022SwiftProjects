@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct HeaderView: View {
+    
+    @State private var isNewEntryShowing = false
+    
     var body: some View {
         GeometryReader { metrics in
             VStack {
                 HStack {
                     Button {
-                        // Chose a photo
+                        print("Add a picture")
+                        isNewEntryShowing = true
                     } label: {
                         Image(systemName: "camera")
                             .resizable()
@@ -27,7 +31,8 @@ struct HeaderView: View {
                         .frame(width: 50)
                     
                     Button {
-                        // New entry
+                        print("Add an entry")
+                        isNewEntryShowing = true
                     } label: {
                         Image(systemName: "plus")
                             .resizable()
@@ -36,6 +41,9 @@ struct HeaderView: View {
                     }
                     .padding()
                     .frame(width: 70, height: 70)
+                }
+                .sheet(isPresented: $isNewEntryShowing) {
+                    NewEntryView()
                 }
             }
             .frame(height: metrics.size.height * 0.4)
