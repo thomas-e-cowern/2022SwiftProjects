@@ -12,6 +12,7 @@
 		41B4B8D72836624300417C6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41B4B8D62836624300417C6B /* Assets.xcassets */; };
 		41B4B8DA2836624300417C6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41B4B8D92836624300417C6B /* Preview Assets.xcassets */; };
 		41B4B8E12836665C00417C6B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4B8E02836665B00417C6B /* ListView.swift */; };
+		41B4B8E32836691B00417C6B /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4B8E22836691B00417C6B /* PhotoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		41B4B8D62836624300417C6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41B4B8D92836624300417C6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41B4B8E02836665B00417C6B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		41B4B8E22836691B00417C6B /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				41B4B8D22836621E00417C6B /* DayOneCloneApp.swift */,
 				41B4B8D42836621E00417C6B /* ContentView.swift */,
 				41B4B8E02836665B00417C6B /* ListView.swift */,
+				41B4B8E22836691B00417C6B /* PhotoView.swift */,
 				41B4B8D62836624300417C6B /* Assets.xcassets */,
 				41B4B8D82836624300417C6B /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				41B4B8D52836621E00417C6B /* ContentView.swift in Sources */,
 				41B4B8D32836621E00417C6B /* DayOneCloneApp.swift in Sources */,
 				41B4B8E12836665C00417C6B /* ListView.swift in Sources */,
+				41B4B8E32836691B00417C6B /* PhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
