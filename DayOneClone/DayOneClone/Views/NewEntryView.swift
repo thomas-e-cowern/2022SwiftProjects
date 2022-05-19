@@ -23,6 +23,15 @@ struct NewEntryView: View {
                         .frame(height: 150)
                 }
                 
+                Section (header: Text("Add Image")) {
+                    Button {
+                        // Add imgage
+                    } label: {
+                        Image(systemName: "camera")
+                    }
+
+                }
+                
                 DatePicker(
                     "Date",
                     selection: $date,
