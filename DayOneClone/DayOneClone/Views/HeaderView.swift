@@ -10,9 +10,9 @@ import SwiftUI
 struct HeaderView: View {
     
     @State private var isNewEntryShowing = false
+    private let screenHeight = UIScreen.main.bounds.height
     
     var body: some View {
-        GeometryReader { metrics in
             VStack {
                 HStack {
                     Button {
@@ -46,10 +46,9 @@ struct HeaderView: View {
                     NewEntryView()
                 }
             }
-            .frame(height: metrics.size.height * 0.4)
+            .frame(height: screenHeight * 0.4)
             .frame(maxWidth: .infinity)
             .background(Color("Blue"))
-        }
     }
 }
 
