@@ -9,7 +9,10 @@ import SwiftUI
 
 struct HeaderView: View {
     var body: some View {
-        Text("Header View")
+        VStack {
+            Text("Header View")
+        }
+        .background(Color("Blue"))
     }
 }
 
