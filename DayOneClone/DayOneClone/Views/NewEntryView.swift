@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct NewEntryView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        Text("New Entry View")
+        NavigationView {
+            Text("New Entry View")
+                .navigationTitle("Add New Entry")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            Image(systemName: "x.circle.fill")
+                        }
+
+                    }
+            }
+        }
     }
 }
 
