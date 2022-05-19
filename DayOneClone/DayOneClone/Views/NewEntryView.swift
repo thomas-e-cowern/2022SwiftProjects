@@ -13,27 +13,29 @@ struct NewEntryView: View {
     
     var body: some View {
         NavigationView {
-            Text("New Entry View")
-                .navigationTitle("Add New Entry")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            presentationMode.wrappedValue.dismiss()
-                        } label: {
-                            Image(systemName: "x.circle")
-                        }
+            Form {
+                Text("New Entry View")
+            } // End of form
+            .navigationTitle("Add New Entry")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "x.circle")
                     }
-                    
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button {
-                            // Save
-                        } label: {
-                            Text("Save")
-                        }
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        // Save
+                    } label: {
+                        Text("Save")
                     }
-            }
-        }
+                }
+            } // End of toolbar
+        } // End of navigation view
     }
 }
 
