@@ -13,6 +13,7 @@ struct NewEntryView: View {
     
     @State private var description: String = ""
     @State private var date = Date()
+    @State private var calendarId: Int = 0
     
     var body: some View {
         NavigationView {
@@ -32,18 +33,26 @@ struct NewEntryView: View {
 
                 }
                 
-                DatePicker(
-                    "Date",
-                    selection: $date,
-                    displayedComponents: [.date]
-                )
-                
-                Button {
-                    // Activate date picker
-                } label: {
-                    Text("Date")
+                HStack {
+                    Image(systemName: "calendar")
+                        .foregroundColor(.blue)
+                    DatePicker(
+                        "",
+                        selection: $date,
+                        displayedComponents: [.date]
+                    )
+                    .id(calendarId)
+                    .onChange(of: date) { _ in
+                        calendarId += 1
+                    }
                 }
-                .frame(maxWidth: .infinity)
+                
+//                Button {
+//                    // Activate date picker
+//                } label: {
+//                    Text("Date")
+//                }
+//                .frame(maxWidth: .infinity)
 
                 
             } // End of form
