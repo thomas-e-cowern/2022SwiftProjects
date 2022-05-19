@@ -46,15 +46,6 @@ struct NewEntryView: View {
                         calendarId += 1
                     }
                 }
-                
-//                Button {
-//                    // Activate date picker
-//                } label: {
-//                    Text("Date")
-//                }
-//                .frame(maxWidth: .infinity)
-
-                
             } // End of form
             .navigationTitle("Add New Entry")
             .navigationBarTitleDisplayMode(.inline)
