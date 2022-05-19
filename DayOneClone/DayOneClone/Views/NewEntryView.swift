@@ -15,14 +15,22 @@ struct NewEntryView: View {
         NavigationView {
             Text("New Entry View")
                 .navigationTitle("Add New Entry")
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
                             presentationMode.wrappedValue.dismiss()
                         } label: {
-                            Image(systemName: "x.circle.fill")
+                            Image(systemName: "x.circle")
                         }
-
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            // Save
+                        } label: {
+                            Text("Save")
+                        }
                     }
             }
         }
