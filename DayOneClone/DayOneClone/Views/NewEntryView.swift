@@ -20,10 +20,11 @@ struct NewEntryView: View {
         NavigationView {
             VStack (alignment: .leading) {
                 TextEditor(text: $description)
-                    .padding(.horizontal)
+                    
                     .multilineTextAlignment(.leading)
                     .frame(height: 150)
                     .border(Color.blue)
+                    .cornerRadius(5)
                     .navigationTitle("Add New Entry")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
@@ -46,12 +47,15 @@ struct NewEntryView: View {
                 
                 HStack {
                     Button {
-                        isHidden = false
+                        isHidden.toggle()
                     } label: {
                         Image(systemName: "calendar")
-                                .foregroundColor(.blue)
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(.blue)
+                        
                     }
-                    .frame(width: 70, height: 70)
+                    .frame(width: 50, height: 50)
 
                     if !isHidden {
                         DatePicker(
@@ -70,15 +74,15 @@ struct NewEntryView: View {
                         // Add imgage
                     } label: {
                         Image(systemName: "camera")
+                            .resizable()
+                            .scaledToFit()
                     }
-                    .frame(width: 70, height: 70)
+                    .frame(width: 50, height: 50)
                     
                     Spacer()
                 }
             }
-    
-           
-
+            .padding(.horizontal, 10)
         } // End of navigation view
     }
 }
