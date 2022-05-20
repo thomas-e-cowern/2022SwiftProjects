@@ -16,35 +16,18 @@ struct NewEntryView: View {
     @State private var calendarId: Int = 0
     @State private var isHidden: Bool = true
     
+    @State private var textField: Int = 0
+    
     var body: some View {
         NavigationView {
             VStack (alignment: .leading) {
                 TextEditor(text: $description)
-                    
+                    .id(textField)
                     .multilineTextAlignment(.leading)
                     .frame(height: 150)
                     .border(Color.blue)
                     .cornerRadius(5)
-                    .navigationTitle("Add New Entry")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button {
-                                presentationMode.wrappedValue.dismiss()
-                            } label: {
-                                Image(systemName: "x.circle")
-                            }
-                        }
-                        
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Button {
-                                // Save
-                            } label: {
-                                Text("Save")
-                            }
-                        }
-                } // End of toolbar
-                
+                    
                 HStack {
                     Button {
                         isHidden.toggle()
@@ -83,6 +66,33 @@ struct NewEntryView: View {
                 }
             }
             .padding(.horizontal, 10)
+            
+            .navigationTitle("Add New Entry")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "x.circle")
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        // Save
+                    } label: {
+                        Text("Save")
+                    }
+                }
+                // Dismiss the keyboard when done
+                ToolbarItem(placement: .keyboard) {
+                    Button("Done") {
+                        textField += 1
+                    }
+                }
+        } // End of toolbar
+        
         } // End of navigation view
     }
 }
