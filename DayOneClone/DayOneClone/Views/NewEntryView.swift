@@ -29,8 +29,9 @@ struct NewEntryView: View {
     @State private var date = Date()
     @State private var calendarId: Int = 0
     @State private var isHidden: Bool = true
-    @State private var image: Image?
+    @State private var images: [UIImage] = []
     @State private var showImagePicker: Bool = false
+    
     @State private var inputImage: UIImage?
     
     @State private var textField: Int = 0
@@ -45,16 +46,6 @@ struct NewEntryView: View {
                         .frame(height: 150)
                         .border(Color("Blue"), width: 3)
                         .cornerRadius(5)
-                    
-                    HStack {
-                        Spacer()
-                        if image != nil {
-                            image?
-                                .resizable()
-                                .scaledToFit()
-                        }
-                        Spacer()
-                    }
                     
                     HStack {
                         Button {
@@ -83,7 +74,6 @@ struct NewEntryView: View {
                         
                         Button {
                             showImagePicker = true
-                            loadImage()
                         } label: {
                             Image(systemName: "camera")
                                 .resizable()
@@ -92,7 +82,16 @@ struct NewEntryView: View {
                         }
                         .frame(width: 50, height: 50)
                         
-                        Spacer()
+                        ScrollView (.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(images, id: \.self) { image in
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 50, height: 50)
+                                }
+                            }
+                        }
                     } // End of HStack
                 } // End of VStack
                 .padding(.horizontal, 10)
@@ -141,8 +140,7 @@ struct NewEntryView: View {
         guard let inputImage = inputImage else {
             return
         }
-
-        image = Image(uiImage: inputImage)
+        images.append(inputImage)
     }
 }
 
