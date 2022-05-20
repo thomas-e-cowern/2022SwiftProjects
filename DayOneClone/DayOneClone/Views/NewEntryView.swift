@@ -9,6 +9,20 @@ import SwiftUI
 
 struct NewEntryView: View {
     
+    init() {
+      let coloredAppearance = UINavigationBarAppearance()
+      coloredAppearance.configureWithOpaqueBackground()
+      coloredAppearance.backgroundColor = UIColor(Color("Blue"))
+      coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+      coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+      
+      UINavigationBar.appearance().standardAppearance = coloredAppearance
+      UINavigationBar.appearance().compactAppearance = coloredAppearance
+      UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+      
+      UINavigationBar.appearance().tintColor = .white
+    }
+    
     @Environment(\.presentationMode) var presentationMode
     
     @State private var description: String = ""
@@ -91,8 +105,7 @@ struct NewEntryView: View {
                         textField += 1
                     }
                 }
-        } // End of toolbar
-        
+            } // End of toolbar
         } // End of navigation view
     }
 }
