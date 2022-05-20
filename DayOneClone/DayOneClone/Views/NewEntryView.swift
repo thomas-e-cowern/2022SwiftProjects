@@ -39,7 +39,7 @@ struct NewEntryView: View {
                     .id(textField)
                     .multilineTextAlignment(.leading)
                     .frame(height: 150)
-                    .border(Color.blue)
+                    .border(Color("Blue"), width: 3)
                     .cornerRadius(5)
                     
                 HStack {
@@ -49,7 +49,7 @@ struct NewEntryView: View {
                         Image(systemName: "calendar")
                             .resizable()
                             .scaledToFit()
-                            .foregroundColor(.blue)
+                            .foregroundColor(Color("Blue"))
                         
                     }
                     .frame(width: 50, height: 50)
@@ -73,6 +73,7 @@ struct NewEntryView: View {
                         Image(systemName: "camera")
                             .resizable()
                             .scaledToFit()
+                            .foregroundColor(Color("Blue"))
                     }
                     .frame(width: 50, height: 50)
                     
