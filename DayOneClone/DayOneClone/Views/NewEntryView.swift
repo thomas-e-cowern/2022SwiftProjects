@@ -17,55 +17,69 @@ struct NewEntryView: View {
     
     var body: some View {
         NavigationView {
-            Form {
-                Section (header: Text("Description")) {
-                    TextEditor(text: $description)
-                        .multilineTextAlignment(.leading)
-                        .frame(height: 150)
-                }
-                
-                Section (header: Text("Add Image")) {
-                    Button {
-                        // Add imgage
-                    } label: {
-                        Image(systemName: "camera")
-                    }
-
-                }
-                
-                HStack {
-                    Image(systemName: "calendar")
-                        .foregroundColor(.blue)
-                    DatePicker(
-                        "",
-                        selection: $date,
-                        displayedComponents: [.date]
-                    )
-                    .id(calendarId)
-                    .onChange(of: date) { _ in
-                        calendarId += 1
-                    }
-                }
-            } // End of form
-            .navigationTitle("Add New Entry")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        presentationMode.wrappedValue.dismiss()
-                    } label: {
-                        Image(systemName: "x.circle")
-                    }
-                }
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        // Save
-                    } label: {
-                        Text("Save")
-                    }
-                }
+//            Form {
+//                Section (header: Text("Description")) {
+            VStack {
+                TextEditor(text: $description)
+                            .multilineTextAlignment(.leading)
+                            .frame(height: 150)
+                            .navigationTitle("Add New Entry")
+                            .navigationBarTitleDisplayMode(.inline)
+                            .toolbar {
+                                ToolbarItem(placement: .navigationBarTrailing) {
+                                    Button {
+                                        presentationMode.wrappedValue.dismiss()
+                                    } label: {
+                                        Image(systemName: "x.circle")
+                                    }
+                                }
+                                
+                                ToolbarItem(placement: .navigationBarLeading) {
+                                    Button {
+                                        // Save
+                                    } label: {
+                                        Text("Save")
+                                    }
+                                }
+                        }
             } // End of toolbar
+//                }
+                
+
+//                Section (header: Text("Add Image")) {
+//                    Button {
+//                        // Add imgage
+//                    } label: {
+//                        Image(systemName: "camera")
+//                    }
+//
+//                }
+                
+                
+//            } // End of form
+            
+            HStack {
+//                    Image(systemName: "calendar")
+//                        .foregroundColor(.blue)
+                DatePicker(
+                    "",
+                    selection: $date,
+                    displayedComponents: [.date]
+                )
+                .id(calendarId)
+                .onChange(of: date) { _ in
+                    calendarId += 1
+                }
+                
+                Button {
+                    // Add imgage
+                } label: {
+                    Image(systemName: "camera")
+                }
+                
+                Spacer()
+            }
+
         } // End of navigation view
     }
 }
