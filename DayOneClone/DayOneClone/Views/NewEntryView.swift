@@ -82,7 +82,7 @@ struct NewEntryView: View {
             }
             .padding(.horizontal, 10)
             
-            .navigationTitle("Add New Entry")
+            .navigationTitle(formatDate(date: date))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -108,6 +108,12 @@ struct NewEntryView: View {
                 }
             } // End of toolbar
         } // End of navigation view
+    }
+    
+    func formatDate (date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        return dateFormatter.string(from: date)
     }
 }
 
