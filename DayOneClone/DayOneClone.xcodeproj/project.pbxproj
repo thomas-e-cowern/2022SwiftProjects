@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		414448302837B04900063078 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144482F2837B04900063078 /* ImagePicker.swift */; };
 		415B368F2836765000D3C5B9 /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B368E2836764F00D3C5B9 /* NewEntryView.swift */; };
 		415B3691283676FA00D3C5B9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B3690283676FA00D3C5B9 /* HeaderView.swift */; };
 		41B4B8D32836621E00417C6B /* DayOneCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4B8D22836621E00417C6B /* DayOneCloneApp.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4144482F2837B04900063078 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		415B368E2836764F00D3C5B9 /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
 		415B3690283676FA00D3C5B9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		41B4B8CF2836621E00417C6B /* DayOneClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayOneClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +44,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4144482C2837AE3700063078 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		41B4B8C62836621D00417C6B = {
 			isa = PBXGroup;
 			children = (
@@ -61,10 +70,12 @@
 		41B4B8D12836621E00417C6B /* DayOneClone */ = {
 			isa = PBXGroup;
 			children = (
+				4144482C2837AE3700063078 /* ViewModels */,
 				41EDA4A828368965002289A2 /* Views */,
 				41B4B8D22836621E00417C6B /* DayOneCloneApp.swift */,
 				41B4B8D62836624300417C6B /* Assets.xcassets */,
 				41B4B8D82836624300417C6B /* Preview Content */,
+				4144482F2837B04900063078 /* ImagePicker.swift */,
 			);
 			path = DayOneClone;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 				41B4B8D32836621E00417C6B /* DayOneCloneApp.swift in Sources */,
 				41B4B8E12836665C00417C6B /* ListView.swift in Sources */,
 				41EDA4AA28368C0E002289A2 /* EntryView.swift in Sources */,
+				414448302837B04900063078 /* ImagePicker.swift in Sources */,
 				41B4B8E32836691B00417C6B /* PhotoView.swift in Sources */,
 				415B368F2836765000D3C5B9 /* NewEntryView.swift in Sources */,
 			);

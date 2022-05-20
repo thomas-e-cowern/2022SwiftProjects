@@ -29,6 +29,9 @@ struct NewEntryView: View {
     @State private var date = Date()
     @State private var calendarId: Int = 0
     @State private var isHidden: Bool = true
+    @State private var image: Image?
+    @State private var showImagePicker: Bool = false
+    @State private var inputImage: UIImage?
     
     @State private var textField: Int = 0
     
@@ -41,6 +44,16 @@ struct NewEntryView: View {
                     .frame(height: 150)
                     .border(Color("Blue"), width: 3)
                     .cornerRadius(5)
+                
+                ZStack {
+                    Rectangle()
+                        .fill(.secondary)
+                    
+                    image?
+                        .resizable()
+                        .scaledToFit()
+                }
+            
                     
                 HStack {
                     Button {
@@ -68,7 +81,8 @@ struct NewEntryView: View {
                     }
                     
                     Button {
-                        // Add imgage
+                        showImagePicker = true
+                        loadImage()
                     } label: {
                         Image(systemName: "camera")
                             .resizable()
@@ -81,7 +95,9 @@ struct NewEntryView: View {
                 }
             }
             .padding(.horizontal, 10)
-            
+            .sheet(isPresented: $showImagePicker) {
+                ImagePicker(image: $inputImage)
+            }
             .navigationTitle(formatDate(date: date))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -114,6 +130,14 @@ struct NewEntryView: View {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         return dateFormatter.string(from: date)
+    }
+    
+    func loadImage () {
+        guard let inputImage = inputImage else {
+            return
+        }
+
+        image = Image(uiImage: inputImage)
     }
 }
 
