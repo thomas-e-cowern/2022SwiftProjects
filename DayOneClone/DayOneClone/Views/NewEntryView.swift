@@ -37,93 +37,98 @@ struct NewEntryView: View {
     
     var body: some View {
         NavigationView {
-            VStack (alignment: .leading) {
-                TextEditor(text: $description)
-                    .id(textField)
-                    .multilineTextAlignment(.leading)
-                    .frame(height: 150)
-                    .border(Color("Blue"), width: 3)
-                    .cornerRadius(5)
-                
-                ZStack {
-                    Rectangle()
-                        .fill(.secondary)
+            ScrollView {
+                VStack (alignment: .leading) {
+                    TextEditor(text: $description)
+                        .id(textField)
+                        .multilineTextAlignment(.leading)
+                        .frame(height: 150)
+                        .border(Color("Blue"), width: 3)
+                        .cornerRadius(5)
                     
-                    image?
-                        .resizable()
-                        .scaledToFit()
-                }
-            
-                    
-                HStack {
-                    Button {
-                        isHidden.toggle()
-                    } label: {
-                        Image(systemName: "calendar")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(Color("Blue"))
-                        
+                    HStack {
+                        Spacer()
+                        if image != nil {
+                            image?
+                                .resizable()
+                                .scaledToFit()
+                        }
+                        Spacer()
                     }
-                    .frame(width: 50, height: 50)
+                    
+                    HStack {
+                        Button {
+                            isHidden.toggle()
+                        } label: {
+                            Image(systemName: "calendar")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(Color("Blue"))
+                            
+                        }
+                        .frame(width: 50, height: 50)
 
-                    if !isHidden {
-                        DatePicker(
-                            "",
-                            selection: $date,
-                            displayedComponents: [.date]
-                        )
-                        .id(calendarId)
-                        .onChange(of: date) { _ in
-                            calendarId += 1
-                            isHidden = true
+                        if !isHidden {
+                            DatePicker(
+                                "",
+                                selection: $date,
+                                displayedComponents: [.date]
+                            )
+                            .id(calendarId)
+                            .onChange(of: date) { _ in
+                                calendarId += 1
+                                isHidden = true
+                            }
+                        }
+                        
+                        Button {
+                            showImagePicker = true
+                            loadImage()
+                        } label: {
+                            Image(systemName: "camera")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(Color("Blue"))
+                        }
+                        .frame(width: 50, height: 50)
+                        
+                        Spacer()
+                    } // End of HStack
+                } // End of VStack
+                .padding(.horizontal, 10)
+                .onChange(of: inputImage, perform: { _ in
+                    loadImage()
+                })
+                .navigationTitle(formatDate(date: date))
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            Image(systemName: "x.circle")
                         }
                     }
                     
-                    Button {
-                        showImagePicker = true
-                        loadImage()
-                    } label: {
-                        Image(systemName: "camera")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(Color("Blue"))
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            // Save
+                        } label: {
+                            Text("Save")
+                        }
                     }
-                    .frame(width: 50, height: 50)
-                    
-                    Spacer()
-                }
-            }
-            .padding(.horizontal, 10)
-            .sheet(isPresented: $showImagePicker) {
-                ImagePicker(image: $inputImage)
-            }
-            .navigationTitle(formatDate(date: date))
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        presentationMode.wrappedValue.dismiss()
-                    } label: {
-                        Image(systemName: "x.circle")
+                    // Dismiss the keyboard when done
+                    ToolbarItem(placement: .keyboard) {
+                        Button("Done") {
+                            textField += 1
+                        }
                     }
-                }
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        // Save
-                    } label: {
-                        Text("Save")
-                    }
-                }
-                // Dismiss the keyboard when done
-                ToolbarItem(placement: .keyboard) {
-                    Button("Done") {
-                        textField += 1
-                    }
-                }
-            } // End of toolbar
+                }// End of toolbar
+            } // End of scroll view
         } // End of navigation view
+        .sheet(isPresented: $showImagePicker) {
+            ImagePicker(image: $inputImage)
+        }
     }
     
     func formatDate (date: Date) -> String {
