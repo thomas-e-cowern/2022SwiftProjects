@@ -20,12 +20,12 @@ struct PersistenceController {
         let controller = PersistenceController(inMemory: true)
 
         // Create 10 example programming languages.
-        for _ in 0..<10 {
-            let entry = Entry()
-            let entries = Entry(context: controller.container.viewContext)
-            language.name = "Example Language 1"
-            language.creator = "A. Programmer"
-        }
+//        for _ in 0..<10 {
+//            let entry = Entry()
+//            let entries = Entry(context: controller.container.viewContext)
+//            language.name = "Example Language 1"
+//            language.creator = "A. Programmer"
+//        }
 
         return controller
     }()
@@ -35,7 +35,7 @@ struct PersistenceController {
     init(inMemory: Bool = false) {
         // If you didn't name your model Main you'll need
         // to change this name below.
-        container = NSPersistentContainer(name: "Main")
+        container = NSPersistentContainer(name: "Entry")
 
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")

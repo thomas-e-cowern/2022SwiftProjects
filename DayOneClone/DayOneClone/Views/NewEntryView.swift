@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct NewEntryView: View {
     
@@ -24,7 +25,7 @@ struct NewEntryView: View {
 //    }
     
     @Environment(\.presentationMode) var presentationMode
-    
+    @Environment(\.managedObjectContext) var moc
     
     @State private var description: String = ""
     @State private var date = Date()
@@ -115,7 +116,11 @@ struct NewEntryView: View {
                     
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button {
-                            // Save
+                            let newEntry = Entry(context:moc)
+                            newEntry.id = UUID()
+                            newEntry.text = description
+                            newEntry.date = date
+                            print("New Entry: \(newEntry)")
                         } label: {
                             Text("Save")
                         }
