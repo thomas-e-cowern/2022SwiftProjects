@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SwiftUI
+import CoreData
 
 struct PersistenceController {
     // A singleton for our entire app to use
@@ -21,7 +21,8 @@ struct PersistenceController {
 
         // Create 10 example programming languages.
         for _ in 0..<10 {
-            let language = ProgrammingLanguage(context: controller.container.viewContext)
+            let entry = Entry()
+            let entries = Entry(context: controller.container.viewContext)
             language.name = "Example Language 1"
             language.creator = "A. Programmer"
         }
