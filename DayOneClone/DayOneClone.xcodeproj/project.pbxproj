@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4142618D283BC82000AB10BF /* Entry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4142618B283BC82000AB10BF /* Entry.xcdatamodeld */; };
 		414448302837B04900063078 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144482F2837B04900063078 /* ImagePicker.swift */; };
 		415B368F2836765000D3C5B9 /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B368E2836764F00D3C5B9 /* NewEntryView.swift */; };
 		415B3691283676FA00D3C5B9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B3690283676FA00D3C5B9 /* HeaderView.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		4142618A283BB4E600AB10BF /* DayOneClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DayOneClone.entitlements; sourceTree = "<group>"; };
+		4142618C283BC82000AB10BF /* Entry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Entry.xcdatamodel; sourceTree = "<group>"; };
 		4144482F2837B04900063078 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		415B368E2836764F00D3C5B9 /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
 		415B3690283676FA00D3C5B9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		41B4B8C62836621D00417C6B = {
 			isa = PBXGroup;
 			children = (
+				4142618B283BC82000AB10BF /* Entry.xcdatamodeld */,
 				41B4B8D12836621E00417C6B /* DayOneClone */,
 				41B4B8D02836621E00417C6B /* Products */,
 			);
@@ -176,6 +179,7 @@
 				41B4B8D52836621E00417C6B /* ContentView.swift in Sources */,
 				415B3691283676FA00D3C5B9 /* HeaderView.swift in Sources */,
 				41B4B8D32836621E00417C6B /* DayOneCloneApp.swift in Sources */,
+				4142618D283BC82000AB10BF /* Entry.xcdatamodeld in Sources */,
 				41B4B8E12836665C00417C6B /* ListView.swift in Sources */,
 				41EDA4AA28368C0E002289A2 /* EntryView.swift in Sources */,
 				414448302837B04900063078 /* ImagePicker.swift in Sources */,
@@ -385,6 +389,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4142618B283BC82000AB10BF /* Entry.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4142618C283BC82000AB10BF /* Entry.xcdatamodel */,
+			);
+			currentVersion = 4142618C283BC82000AB10BF /* Entry.xcdatamodel */;
+			path = Entry.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 41B4B8C72836621D00417C6B /* Project object */;
 }
