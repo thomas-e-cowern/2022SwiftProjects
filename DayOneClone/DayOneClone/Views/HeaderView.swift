@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HeaderView: View {
     
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var entries: FetchedResults<Entry>
+    
     @State private var isNewEntryShowing = false
     @State private var showImagePicker = false
     private let screenHeight = UIScreen.main.bounds.height
