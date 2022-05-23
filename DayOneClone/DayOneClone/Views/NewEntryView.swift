@@ -48,6 +48,9 @@ struct NewEntryView: View {
                         .border(Color("Blue"), width: 3)
                         .cornerRadius(5)
                     
+                    Spacer()
+                        .frame(idealHeight: 300)
+                    
                     HStack {
                         Button {
                             isHidden.toggle()
