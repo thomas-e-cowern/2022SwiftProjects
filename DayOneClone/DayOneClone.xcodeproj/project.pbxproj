@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4142618D283BC82000AB10BF /* Entry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4142618B283BC82000AB10BF /* Entry.xcdatamodeld */; };
+		4142618F283BD5AC00AB10BF /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4142618E283BD5AC00AB10BF /* PersistenceController.swift */; };
 		414448302837B04900063078 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4144482F2837B04900063078 /* ImagePicker.swift */; };
 		415B368F2836765000D3C5B9 /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B368E2836764F00D3C5B9 /* NewEntryView.swift */; };
 		415B3691283676FA00D3C5B9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415B3690283676FA00D3C5B9 /* HeaderView.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		4142618A283BB4E600AB10BF /* DayOneClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DayOneClone.entitlements; sourceTree = "<group>"; };
 		4142618C283BC82000AB10BF /* Entry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Entry.xcdatamodel; sourceTree = "<group>"; };
+		4142618E283BD5AC00AB10BF /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		4144482F2837B04900063078 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		415B368E2836764F00D3C5B9 /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
 		415B3690283676FA00D3C5B9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				4142618B283BC82000AB10BF /* Entry.xcdatamodeld */,
+				4142618E283BD5AC00AB10BF /* PersistenceController.swift */,
 				41B4B8D12836621E00417C6B /* DayOneClone */,
 				41B4B8D02836621E00417C6B /* Products */,
 			);
@@ -185,6 +188,7 @@
 				414448302837B04900063078 /* ImagePicker.swift in Sources */,
 				41B4B8E32836691B00417C6B /* PhotoView.swift in Sources */,
 				415B368F2836765000D3C5B9 /* NewEntryView.swift in Sources */,
+				4142618F283BD5AC00AB10BF /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
