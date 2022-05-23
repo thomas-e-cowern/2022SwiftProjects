@@ -10,6 +10,7 @@ import SwiftUI
 struct HeaderView: View {
     
     @State private var isNewEntryShowing = false
+    @State private var showImagePicker = false
     private let screenHeight = UIScreen.main.bounds.height
     
     var body: some View {
@@ -18,6 +19,8 @@ struct HeaderView: View {
                     Button {
                         print("Add a picture")
                         isNewEntryShowing = true
+                        showImagePicker = true
+                        print("Picker: \(showImagePicker)")
                     } label: {
                         Image(systemName: "camera")
                             .resizable()
@@ -43,7 +46,7 @@ struct HeaderView: View {
                     .frame(width: 70, height: 70)
                 }
                 .sheet(isPresented: $isNewEntryShowing) {
-                    NewEntryView()
+                    NewEntryView(showImagePicker: $showImagePicker)
                 }
             }
             .frame(height: screenHeight * 0.4)

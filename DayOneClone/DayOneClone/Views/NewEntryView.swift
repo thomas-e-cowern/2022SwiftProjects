@@ -9,28 +9,29 @@ import SwiftUI
 
 struct NewEntryView: View {
     
-    init() {
-      let coloredAppearance = UINavigationBarAppearance()
-      coloredAppearance.configureWithOpaqueBackground()
-      coloredAppearance.backgroundColor = UIColor(Color("Blue"))
-      coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-      coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-      
-      UINavigationBar.appearance().standardAppearance = coloredAppearance
-      UINavigationBar.appearance().compactAppearance = coloredAppearance
-      UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
-      
-      UINavigationBar.appearance().tintColor = .white
-    }
+//    init() {
+//      let coloredAppearance = UINavigationBarAppearance()
+//      coloredAppearance.configureWithOpaqueBackground()
+//      coloredAppearance.backgroundColor = UIColor(Color("Blue"))
+//      coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+//      coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//      
+//      UINavigationBar.appearance().standardAppearance = coloredAppearance
+//      UINavigationBar.appearance().compactAppearance = coloredAppearance
+//      UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+//      
+//      UINavigationBar.appearance().tintColor = .white
+//    }
     
     @Environment(\.presentationMode) var presentationMode
+    
     
     @State private var description: String = ""
     @State private var date = Date()
     @State private var calendarId: Int = 0
     @State private var isHidden: Bool = true
     @State private var images: [UIImage] = []
-    @State private var showImagePicker: Bool = false
+    @Binding var showImagePicker: Bool
     
     @State private var inputImage: UIImage?
     
@@ -128,6 +129,11 @@ struct NewEntryView: View {
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(image: $inputImage)
         }
+        .onAppear {
+            if showImagePicker {
+                print("Image picker should be there")
+            }
+        }
     }
     
     func formatDate (date: Date) -> String {
@@ -145,7 +151,10 @@ struct NewEntryView: View {
 }
 
 struct NewEntryView_Previews: PreviewProvider {
+    
+    @State static var showImagePicker = false
+    
     static var previews: some View {
-        NewEntryView()
+        NewEntryView(showImagePicker: Binding.constant(false))
     }
 }
