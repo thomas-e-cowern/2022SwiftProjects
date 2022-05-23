@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4142618A283BB4E600AB10BF /* DayOneClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DayOneClone.entitlements; sourceTree = "<group>"; };
 		4144482F2837B04900063078 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		415B368E2836764F00D3C5B9 /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
 		415B3690283676FA00D3C5B9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		41B4B8D12836621E00417C6B /* DayOneClone */ = {
 			isa = PBXGroup;
 			children = (
+				4142618A283BB4E600AB10BF /* DayOneClone.entitlements */,
 				4144482C2837AE3700063078 /* ViewModels */,
 				41EDA4A828368965002289A2 /* Views */,
 				41B4B8D22836621E00417C6B /* DayOneCloneApp.swift */,
@@ -304,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DayOneClone/DayOneClone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DayOneClone/Preview Content\"";
@@ -334,6 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DayOneClone/DayOneClone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DayOneClone/Preview Content\"";
