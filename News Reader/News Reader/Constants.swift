@@ -16,6 +16,8 @@ struct Constants {
         
         static let sourcesApiCall = "https://newsapi.org/v2/top-headlines?sources="
         
+        static let searchApiCall = "https://newsapi.org/v2/everything?qInTitle="
+        
         static let newsApiKey = "&apiKey=91918a83b185469c9f81f5af74ae59f9"
     }
     

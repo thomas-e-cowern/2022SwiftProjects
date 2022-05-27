@@ -74,7 +74,7 @@ class Networking: ObservableObject {
     func getArticlesForSearch (searchTerm: String) async {
         
         let searchTerm = searchTerm.lowercased()
-        let searchUrlString = "https://newsapi.org/v2/everything?qInTitle=\(searchTerm)&apiKey=91918a83b185469c9f81f5af74ae59f9"
+        let searchUrlString = Constants.API.searchApiCall + "\(searchTerm)" + Constants.API.newsApiKey
         
         print("Search: \(searchUrlString)")
         
