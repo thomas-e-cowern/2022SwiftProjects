@@ -24,7 +24,7 @@ Icons and Images:
 [![News icons][news-icon-image]][news-icon-url]
 [![Icon Generator][icon-gen-image]][icon-gen-url]
 
-<!--[![License][license-image]][license-url]  -->
+Make it better:
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
@@ -33,6 +33,16 @@ Icons and Images:
 - [x] Headline News 
 - [x] Search by subject
 - [x] Headline by news channel
+
+## Upcoming
+
+- [ ] Cache articles and images and reload from cache
+- [ ] Add accessibility per apple: https://www.apple.com/accessibility/ 
+- [ ] Add comments 
+- [ ] Add network outage indicator when network is not available
+- [ ] Add folders to organize project
+- [ ] And last, but certainly not least, try to refactor for MVVM (WHAT? ....)
+
 
 ## Requirements
 
