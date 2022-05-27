@@ -13,7 +13,6 @@ class Networking: ObservableObject {
     static let shared = Networking()
     
     let sourcesUrlString = Constants.API.headlinesApiCall
-    
     @Published var sources : [Source] = []
     @Published var categories : [String] = ["All"]
     @Published var channelArticles = [Article]()
@@ -41,7 +40,7 @@ class Networking: ObservableObject {
                 print("😡😡😡 Something went wrong decoding in get sources")
             }
         } catch {
-            print("Invalid data in get sources")
+            print("Invalid data in get sources \(error.localizedDescription)")
         }
     } // End of get sources
     
@@ -49,7 +48,7 @@ class Networking: ObservableObject {
     func getArticlesBySource (source: String) async {
         
         let source = source.filter { !$0.isWhitespace }.lowercased()
-        let sourceUrlString = Constants.API.sourcesApiCall + "\(source)" + Constants.API.newsApiKey
+        let sourceUrlString = Constants.API.sourcesBaseUrl + "\(source)" + Constants.API.apiKey
         
         guard let url = URL(string: sourceUrlString) else {
             print("Invalid url in get article by source")
@@ -74,7 +73,7 @@ class Networking: ObservableObject {
     func getArticlesForSearch (searchTerm: String) async {
         
         let searchTerm = searchTerm.lowercased()
-        let searchUrlString = Constants.API.searchApiCall + "\(searchTerm)" + Constants.API.newsApiKey
+        let searchUrlString = Constants.API.searchApiCall + "\(searchTerm)" + Constants.API.apiKey
         
         print("Search: \(searchUrlString)")
         
