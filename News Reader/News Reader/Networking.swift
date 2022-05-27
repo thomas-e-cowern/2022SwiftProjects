@@ -49,7 +49,7 @@ class Networking: ObservableObject {
     func getArticlesBySource (source: String) async {
         
         let source = source.filter { !$0.isWhitespace }.lowercased()
-        let sourceUrlString = "https://newsapi.org/v2/top-headlines?sources=\(source)&apiKey=91918a83b185469c9f81f5af74ae59f9"
+        let sourceUrlString = Constants.API.sourcesApiCall + "\(source)" + Constants.API.newsApiKey
         
         guard let url = URL(string: sourceUrlString) else {
             print("Invalid url in get article by source")
