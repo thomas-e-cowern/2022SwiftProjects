@@ -48,6 +48,8 @@ Make it better:
 
 - iOS 15
 - Xcode 13.0
+- Api key from newsapi.org
+- Create a Constants.swift file with urls for headlines, search and sources along with your API key 
 
 [https://github.com/thomas-e-cowern/](https://github.com/thomas-e-cowern/)
 
