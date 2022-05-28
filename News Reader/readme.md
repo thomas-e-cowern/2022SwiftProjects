@@ -8,7 +8,14 @@
     News Reader offers users top headlines, ability to search for headlines via subject, or the ability to recieve headlines by news channel.
   </p>
 </p>
+<p align="row">
+<img src= "News Reader/Headlines.gif" width="200" >
+<img src= "CryptoPortfolio/Favorites.gif" width="200" >
+<img src= "CryptoPortfolio/Owned.gif" width="200" >
+</p>
 <br />
+
+
 
 Technologies:
 
