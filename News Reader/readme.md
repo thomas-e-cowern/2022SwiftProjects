@@ -9,9 +9,9 @@
   </p>
 </p>
 <p align="row">
-<img src= "News Reader/Headlines.gif" width="200" >
-<img src= "News Reader/Search.gif" width="200" >
-<img src= "CryptoPortfolio/Owned.gif" width="200" >
+<img src= "News Reader/Headlines.gif" width="200"/>
+<img src= "News Reader/Search.gif" width="200"/>
+<img src= "News Reader/Sources.gif" width="200"/>
 </p>
 <br />
 
